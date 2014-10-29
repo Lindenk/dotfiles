@@ -10,10 +10,13 @@ super + {_,shift + }{j,l,i,k}
 	bspc window -{f,s} {left,right,up,down}
 
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,window -d} ^{1-9,10}
+	bspc {desktop -f,window -d} {I,II,III,IV,V,VI,VII,VIII,IX,X}
 
 super + {_,shift} + Tab}
-	bspc desktop -f {next,last}
+	bspc desktop -f {next,prev}
+
+super + ctrl + {_,shift} + Tab
+	bspc desktop -m {prev,next} -f
 
 super + {s,f}
 	bspc window -t {floating,fullscreen}
