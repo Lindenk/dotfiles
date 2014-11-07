@@ -36,6 +36,14 @@ super + !button{1-3}
 super + d
 	dmenu_run
 
+## sound
+XF86AudioRaiseVolume
+	ponymix increase 5
+XF86AudioLowerVolume
+	ponymix decrease 5
+XF86AudioMute
+	ponymix toggle
+
 ## remapped keys
 shift + Escape
 	xdotool key Caps_Lock
