@@ -37,11 +37,11 @@ super + d
 	dmenu_run
 
 ## sound
-XF86AudioRaiseVolume
+~XF86AudioRaiseVolume
 	ponymix increase 5
-XF86AudioLowerVolume
+~XF86AudioLowerVolume
 	ponymix decrease 5
-XF86AudioMute
+~XF86AudioMute
 	ponymix toggle
 
 ## remapped keys
