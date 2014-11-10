@@ -9,6 +9,7 @@ bspc config window_gap  12
 
 bspc config focus_follows_pointer true
 bspc config pointer_follows_monitor true
+bspc config remove_disabled_monitors true
 
-bspc monitor DVI-D-0 -d I II III IV V
-bspc monitor DVI-I-0 -d VI VII VIII IX X
+bspc monitor DVI-D-0 -d I
+bspc monitor DVI-I-0 -d II

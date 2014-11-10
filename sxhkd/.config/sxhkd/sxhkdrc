@@ -9,11 +9,11 @@ super + shift + q
 super + {_,shift + }{j,l,i,k}
 	bspc window -{f,s} {left,right,up,down}
 
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,window -d} {I,II,III,IV,V,VI,VII,VIII,IX,X}
+super + {_,shift} + {1-9,0}
+	$BSPWM_DIR/createAndCleanUpExec.zsh "{desktop -f,window -d}" "{I,II,III,IV,V,VI,VII,VIII,IX,X}"
 
-super + {_,shift} + Tab}
-	bspc desktop -f {next,prev}
+super + {_,shift} + Tab
+	$BSPWM_DIR/cleanUpExec.zsh "bspc desktop -f {next,prev}"
 
 super + ctrl + {_,shift} + Tab
 	bspc desktop -m {prev,next} -f
@@ -37,11 +37,11 @@ super + d
 	dmenu_run
 
 ## sound
-~XF86AudioRaiseVolume
+XF86AudioRaiseVolume
 	ponymix increase 5
-~XF86AudioLowerVolume
+XF86AudioLowerVolume
 	ponymix decrease 5
-~XF86AudioMute
+XF86AudioMute
 	ponymix toggle
 
 ## remapped keys
