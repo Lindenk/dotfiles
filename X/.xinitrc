@@ -8,7 +8,11 @@ numlockx on
 # Set repeat rate
 xset r rate 200 35
 
+# Monitors
 xrandr --output DVI-D-0 --primary --mode 1920x1080 --output DVI-I-0 --mode 1440x900 --right-of DVI-D-0
+
+# Wallpaper
+sh ~/.fehbg &
 
 sxhkd &
 exec bspwm

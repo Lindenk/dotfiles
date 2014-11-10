@@ -37,12 +37,13 @@ super + d
 	dmenu_run
 
 ## sound
-XF86AudioRaiseVolume
-	ponymix increase 5
-XF86AudioLowerVolume
-	ponymix decrease 5
-XF86AudioMute
-	ponymix toggle
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+	ponymix {increase 5,decrease 5,toggle}; \
+	~/.panel/showVol.sh
+
+## applications
+super + space
+	termite -c ~/.config/termite/config
 
 ## remapped keys
 shift + Escape

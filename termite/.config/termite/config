@@ -1,0 +1,4 @@
+[colors]
+foreground = #11EE11
+background = rgba(20, 20, 20, .6)
+cursor = #11EE11
