@@ -15,7 +15,10 @@ super + {_,shift} + {1-9,0}
 super + {_,shift} + Tab
 	$BSPWM_DIR/cleanUpExec.zsh "bspc desktop -f {next,prev}"
 
-super + ctrl + {_,shift} + Tab
+super + ctrl + {j,l}
+	bspc monitor -f {prev,next}
+
+super + ctrl + shift + {j,l}
 	bspc desktop -m {prev,next} -f
 
 super + {s,f}
