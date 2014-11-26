@@ -48,6 +48,11 @@ XF86Audio{RaiseVolume,LowerVolume,Mute}
 super + space
 	termite -c ~/.config/termite/config
 
+## misc
+# launch video link from clipboard with mpv
+super + shift + p
+	mpv $(xsel)
+
 ## remapped keys
 shift + Escape
 	xdotool key Caps_Lock

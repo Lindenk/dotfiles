@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/env zsh
 
 # start compton
 compton -b --config ~/.config/compton/compton.conf
@@ -15,3 +15,20 @@ bspc config merge_overlapping_monitors true
 
 bspc monitor DVI-D-0 -d I
 bspc monitor DVI-I-0 -d II
+
+# rules
+bspc rule -a Chromium desktop=I
+bspc rule -a Steam desktop=II
+
+
+# launch stuff
+{
+  # wait for an internet connection
+  while ! wget http://google.com -O- 2>/dev/null | grep -q Lucky; do
+    sleep .1
+  done
+
+  # launch stuff
+  chromium &
+  steam &
+} &
