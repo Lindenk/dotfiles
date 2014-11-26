@@ -56,11 +56,11 @@ map <a-l> nextTab
 map <a-J> moveTabLeft
 map <a-L> moveTabRight
 
-map <a-0> firstTab
-map <a-)> lastTab
+map <a-h> firstTab
+map <a-H> lastTab
 
-map M Marks.activateCreateMode
-map m Marks.activateGotoMode
+map M Marks.activateGotoMode
+map m Marks.activateCreateMode
 
 map b Vomnibar.activateBookmarks
 map B Vomnibar.activateBookmarksInNewTab
