@@ -5,6 +5,8 @@ super + alt + Escape
 
 super + shift + q
 	bspc window -c
+super + shift + alt + q
+	bspc window -k
 
 super + {_,shift + }{j,l,i,k}
 	bspc window -{f,s} {left,right,up,down}

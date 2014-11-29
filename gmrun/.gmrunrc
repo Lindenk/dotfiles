@@ -1,0 +1,52 @@
+# gmrun configuration file
+# gmrun is (C) Mihai Bazon, <mishoo@infoiasi.ro>
+# GPL v2.0 applies
+
+# Set terminal
+Terminal = termite
+TermExec = ${Terminal} -e
+AlwaysInTerm = ssh telnet ftp vi vim man nano ranger
+
+# Set window geometry (except height)
+Width = 400
+Top = 300
+Left = 450
+
+# History size
+History = 1024
+
+# Shows last history line selected when invoked
+ShowLast = 1
+
+# Show files starting with '.'
+# Default is 0 (off), set it to 1 if you want "hidden" files to show up
+# in the completion window
+ShowDotFiles = 0
+
+# Timeout (in milliseconds) after which gmrun will simulate a TAB press
+# Set this to NULL if do not like this feature.
+TabTimeout = 1
+
+# URL handlers
+# If the entered text is "http://www.google.com" then:
+#   - %u gets replaced with the whole URL ("http://www.google.com")
+#   - %s gets replaced with "//www.google.com".  This is useful for URL-s
+#     like "man:printf" --> %s will get replaced with "printf"
+URL_http = chromium %u
+URL_mailto = chromium -remote "mailto(%s)"
+URL_man = ${TermExec} 'man %s'
+URL_info = ${TermExec} 'info %s'
+#URL_file = pcmanfm %s
+URL_readme = ${TermExec} 'less /usr/doc/%s/README'
+URL_info = ${TermExec} 'info %s'
+URL_sh = sh -c '%s'
+#URL_paci = ${TermExec} 'pacman -S %s'
+#URL_pacs = ${TermExec} 'pacman -Ss %s'
+
+# extension handlers
+#EXT:doc,rtf = AbiWord %s
+EXT:txt,cc,cpp,h,java,html,htm,epl,tex,latex,js,css,xml,xsl,am,php,css,js,py,rb = atom %s
+EXT:mpeg,mpg,avi,mkv,flv = mpv %s
+EXT:mp3,ogg,m4a,wmv,wma = mpv %s
+#EXT:ps = gv %s
+EXT:pdf = evince %s
