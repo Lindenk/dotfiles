@@ -52,7 +52,8 @@ XF86Audio{RaiseVolume,LowerVolume,Mute}
 
 ## applications
 super + d
-        dmenu_run
+	gmrun
+#       dmenu_run
 
 super + space
 	termite -c ~/.config/termite/config

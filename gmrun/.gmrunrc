@@ -45,8 +45,8 @@ URL_sh = sh -c '%s'
 
 # extension handlers
 #EXT:doc,rtf = AbiWord %s
-EXT:txt,cc,cpp,h,java,html,htm,epl,tex,latex,js,css,xml,xsl,am,php,css,js,py,rb = atom %s
+EXT:txt,cc,cpp,h,java,html,htm,epl,tex,latex,js,css,xml,xsl,am,php,css,js,py,rb,cs = atom %s
 EXT:mpeg,mpg,avi,mkv,flv = mpv %s
 EXT:mp3,ogg,m4a,wmv,wma = mpv %s
 #EXT:ps = gv %s
-EXT:pdf = evince %s
+EXT:pdf = epdfview %s
