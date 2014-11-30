@@ -1,13 +1,18 @@
 ## bspwm
 
+# control
 super + alt + Escape
 	bspc quit
 
 super + shift + q
 	bspc window -c
 
+# organization
 super + {_,shift + }{j,l,i,k}
 	bspc window -{f,s} {left,right,up,down}
+
+super + {_,shift} + v
+	bspc desktop --flip {vertical,horizontal}
 
 super + {_,shift} + {1-9,0}
 	$BSPWM_DIR/createAndCleanUpExec.zsh "{desktop -f,window -d}" "{I,II,III,IV,V,VI,VII,VIII,IX,X}"
@@ -27,6 +32,7 @@ super + {s,f}
 super + alt + {j,k,l,i}
 	bspc window -e {left -10,down +10,right +10,up -10}
 
+# mouse
 super + button{1-3}
 	bspc pointer -g {move,resize_side,resize_corner}
 
@@ -36,8 +42,6 @@ super + !button{1-3}
 ~button1
 	bspc pointer -g focus
 
-super + d
-	dmenu_run
 
 ## sound
 XF86Audio{RaiseVolume,LowerVolume,Mute}
@@ -45,13 +49,24 @@ XF86Audio{RaiseVolume,LowerVolume,Mute}
 	~/.panel/showVol.sh
 
 ## applications
+super + d
+        dmenu_run
+
 super + space
 	termite -c ~/.config/termite/config
 
 ## misc
 # launch video link from clipboard with mpv
-super + shift + p
+super + p
 	mpv $(xsel)
+
+#launch livestreamer with clipboard url
+super + shift + p
+	lser $(xsel)
+
+#launch mpv with the url of all youtube embedded videos on the page
+super + alt + p
+	play-sc2cast $(xsel)
 
 ## remapped keys
 shift + Escape

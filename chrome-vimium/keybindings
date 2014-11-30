@@ -49,6 +49,9 @@ map T duplicateTab
 map x removeTab
 map X restoreTab
 
+map P togglePinTab
+map W moveTabToNewWindow
+
 
 # tab nav
 map <a-j> previousTab
