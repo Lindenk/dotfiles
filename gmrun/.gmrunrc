@@ -9,8 +9,8 @@ AlwaysInTerm = ssh telnet ftp vi vim man nano ranger
 
 # Set window geometry (except height)
 Width = 400
-Top = 300
-Left = 450
+Top = 100
+Left = 100
 
 # History size
 History = 1024
