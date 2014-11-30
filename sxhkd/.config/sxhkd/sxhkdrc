@@ -6,6 +6,8 @@ super + alt + Escape
 
 super + shift + q
 	bspc window -c
+super + shift + alt + q
+	bspc window -k
 
 # organization
 super + {_,shift + }{j,l,i,k}
