@@ -1,0 +1,13 @@
+#!/bin/env zsh
+
+ID=$1
+CLASS=$2
+INSTANCE=$3
+
+NAME=`xdotool getwindowname $ID`
+
+if [ $NAME = "float" ]; then
+ echo "floating=true"
+ xdotool windowmove $ID 100 100
+fi
+

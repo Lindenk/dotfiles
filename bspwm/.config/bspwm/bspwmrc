@@ -19,7 +19,9 @@ bspc monitor DVI-I-0 -d II
 # rules
 bspc rule -a Chromium desktop=I
 bspc rule -a Steam desktop=II
+bspc rule -a Pidgin desktop=X
 
+bspc config external_rules_command=./bsp_erules
 
 # launch stuff
 {
@@ -31,4 +33,5 @@ bspc rule -a Steam desktop=II
   # launch stuff
   chromium &
   steam &
+  pidgin &
 } &

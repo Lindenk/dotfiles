@@ -3,5 +3,5 @@ browser = chromium
 
 [colors]
 foreground = #11EE11
-background = rgba(20, 20, 20, .6)
+background = rgba(20, 20, 20, .8)
 cursor = #11EE11

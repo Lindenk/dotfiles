@@ -5,7 +5,7 @@
 # Set terminal
 Terminal = termite
 TermExec = ${Terminal} -e
-AlwaysInTerm = ssh telnet ftp vi vim man nano ranger
+AlwaysInTerm = ssh telnet ftp vi vim man nano ranger weechat python python2
 
 # Set window geometry (except height)
 Width = 400
@@ -21,11 +21,11 @@ ShowLast = 1
 # Show files starting with '.'
 # Default is 0 (off), set it to 1 if you want "hidden" files to show up
 # in the completion window
-ShowDotFiles = 0
+ShowDotFiles = 1
 
 # Timeout (in milliseconds) after which gmrun will simulate a TAB press
 # Set this to NULL if do not like this feature.
-TabTimeout = 1
+TabTimeout = 0
 
 # URL handlers
 # If the entered text is "http://www.google.com" then:
