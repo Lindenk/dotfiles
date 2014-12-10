@@ -51,8 +51,10 @@ XF86Audio{RaiseVolume,LowerVolume,Mute}
 	~/.panel/showVol.sh
 
 super + {F1, F2, F3}:
-	$BSPWM_DIR/move_all.zsh {0,1,2}; \
-	pactl set-default-sink {0,1,2}
+	n={0,1,2} ; \
+	$BSPWM_DIR/move_all.zsh $n ; \
+	pactl set-default-sink $n ; \
+	~/.panel/showVol.sh
 
 ## applications
 super + d
