@@ -50,6 +50,10 @@ XF86Audio{RaiseVolume,LowerVolume,Mute}
 	ponymix {increase 5,decrease 5,toggle}; \
 	~/.panel/showVol.sh
 
+super + {F1, F2, F3}:
+	$BSPWM_DIR/move_all.zsh {0,1,2}; \
+	pactl set-default-sink {0,1,2}
+
 ## applications
 super + d
 	gmrun
