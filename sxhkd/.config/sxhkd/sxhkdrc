@@ -64,6 +64,9 @@ super + d
 super + space
 	termite -c ~/.config/termite/config
 
+super + shift + space
+	~/.term/bsp_toggle_term.zsh
+
 ## misc
 # launch video link from clipboard with mpv
 super + p

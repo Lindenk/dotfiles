@@ -1,27 +1,32 @@
 #!/bin/env zsh
 
+cd ~/.term
+
 . ./vars.zsh
 
 id=$(xdotool search --class floatingterm)
 state=$(cat termState)
-echo $state
 
-if [ "$state" == "hidden" ]; then
+if [ "$state" = "hidden" ]; then
 
-  for i in {-$WIDTH..0..50}
+  for i in {-$WIDTH..0..100}
   do
   xdotool windowmove -- $id $i 0
   done
 
-  echo "visable" >! termState
+  state="visable"
+  echo $state >! termState
 
-elif [ "$state" == "visable" ]; then
+elif [ "$state" = "visable" ]; then
 
-  for i in {0..-$WIDTH..50}
+  for i in {0..-$WIDTH..100}
   do
   xdotool windowmove -- $id $i 0
   done
 
-  echo "hidden" >! termState
+  state="hidden"
+  echo $state >! termState
 
 fi
+
+echo $state

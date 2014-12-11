@@ -35,3 +35,7 @@ bspc config external_rules_command=./bsp_erules
   steam &
   pidgin &
 } &
+
+{
+  ~/.term/bsp_init_term.zsh &
+} &

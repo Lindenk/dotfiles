@@ -1,5 +1,7 @@
 #!/bin/env zsh
 
+cd ~/.term
+
 . ./vars.zsh
 
 termite -c ~/.config/termite/config --class=floatingterm &
