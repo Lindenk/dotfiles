@@ -61,10 +61,10 @@ super + d
 	gmrun
 #       dmenu_run
 
-super + space
+super + shift + space
 	termite -c ~/.config/termite/config
 
-super + shift + space
+super + space
 	~/.term/bsp_toggle_term.zsh
 
 ## misc
