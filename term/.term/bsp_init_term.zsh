@@ -2,7 +2,7 @@
 
 # This will init the sliding term with bspwm
 
-bspc rule -a floatingterm floating=true
+bspc rule -a termite floating=true border=off -o
 ~/.term/createTerm.zsh
 
 bspc window last -f

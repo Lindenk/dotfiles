@@ -1,4 +1,4 @@
 #!/bin/env zsh
 
-WIDTH=500
+WIDTH=600
 HEIGHT='100%'

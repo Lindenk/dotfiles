@@ -87,3 +87,7 @@ shift + Escape
 ## reload sxhkd
 super + Escape
 	pkill -USR1 -x sxhkd
+
+## kill x
+super + alt + shift + backspace
+	pkill X

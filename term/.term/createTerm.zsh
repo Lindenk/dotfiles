@@ -6,12 +6,16 @@ cd ~/.term
 
 cd ~/
 
-termite -c ~/.config/termite/config --class=floatingterm &
+termite -c ~/.config/termite/config -e "tmux" &
+#lxterminal -t floatingterm -e "tmux" &
 
 sleep .2
 
-id=$(xdotool search --class floatingterm)
+id=$(xdotool getactivewindow)
 echo $id
+echo $id >! .term/windowid
 
 xdotool windowsize $id $WIDTH $HEIGHT
 xdotool windowmove -- $id -$WIDTH 0
+
+echo "hidden" >! .term/termState

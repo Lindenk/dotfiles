@@ -2,7 +2,7 @@
 
 # have bspwm toggle the term (and focus the right window and such)
 
-id=$(xdotool search --class floatingterm | head -1)
+id=$(cat ~/.term/windowid | head -1)
 echo $id
 
 bspc window $id -d focused -f
