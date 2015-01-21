@@ -61,6 +61,9 @@ super + d
   gmrun
 #       dmenu_run
 
+super + shift + d
+  ~/.dmenu_steam/dmenu_steam.sh
+
 super + shift + space
   termite -c ~/.config/termite/config
 
