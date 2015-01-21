@@ -6,6 +6,7 @@ compton -b --config ~/.config/compton/compton.conf
 # bsp config
 bspc config border_width 1
 bspc config window_gap  12
+bspc config top_padding 20
 
 bspc config focus_follows_pointer true
 bspc config pointer_follows_monitor true
@@ -32,7 +33,7 @@ bspc config external_rules_command=./bsp_erules
 
   # launch stuff
   chromium &
-  steam &
+  steam -silent &
   pidgin &
 } &
 
@@ -40,3 +41,7 @@ bspc config external_rules_command=./bsp_erules
   sleep 3
   ~/.term/bsp_init_term.zsh &
 } &
+
+# panel
+
+~/.panel/timeOnly.zsh &

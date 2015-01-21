@@ -16,6 +16,6 @@ echo $id
 echo $id >! .term/windowid
 
 xdotool windowsize $id $WIDTH $HEIGHT
-xdotool windowmove -- $id -$WIDTH 0
+xdotool windowmove -- $id -$WIDTH 20
 
 echo "hidden" >! .term/termState

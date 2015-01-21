@@ -2,92 +2,97 @@
 
 # control
 super + alt + Escape
-	bspc quit
+  bspc quit
 
 super + shift + q
-	bspc window -c
+  bspc window -c
 super + shift + alt + q
-	bspc window -k
+  bspc window -k
 
 # organization
 super + {_,shift + }{j,l,i,k}
-	bspc window -{f,s} {left,right,up,down}
+  bspc window -{f,s} {left,right,up,down}
 
 super + {_,shift} + v
-	bspc desktop --flip {vertical,horizontal}
+  bspc desktop --flip {vertical,horizontal}
 
 super + {_,shift} + {1-9,0}
-	$BSPWM_DIR/createAndCleanUpExec.zsh "{desktop -f,window -d}" "{I,II,III,IV,V,VI,VII,VIII,IX,X}"
+  $BSPWM_DIR/createAndCleanUpExec.zsh "{desktop -f,window -d}" "{I,II,III,IV,V,VI,VII,VIII,IX,X}"
 
 super + {_,shift} + Tab
-	$BSPWM_DIR/cleanUpExec.zsh "bspc desktop -f {next,prev}"
+  $BSPWM_DIR/cleanUpExec.zsh "bspc desktop -f {next,prev}"
 
 super + ctrl + {j,l}
-	bspc monitor -f {prev,next}
+  bspc monitor -f {prev,next}
 
 super + ctrl + shift + {j,l}
-	bspc desktop -m {prev,next} -f
+  bspc desktop -m {prev,next} -f
 
 super + {s,f}
-	bspc window -t {floating,fullscreen}
+  bspc window -t {floating,fullscreen}
 
 super + alt + {j,k,l,i}
-	bspc window -e {left -10,down +10,right +10,up -10}
+  bspc window -e {left -10,down +10,right +10,up -10}
 
 # mouse
 super + button{1-3}
-	bspc pointer -g {move,resize_side,resize_corner}
+  bspc pointer -g {move,resize_side,resize_corner}
 
 super + !button{1-3}
-	bspc pointer -t %i %i
+  bspc pointer -t %i %i
 
 ~button1
-	bspc pointer -g focus
+  bspc pointer -g focus
 
 
 ## sound
 XF86Audio{RaiseVolume,LowerVolume,Mute}
-	ponymix {increase 5,decrease 5,toggle}; \
-	~/.panel/showVol.sh
+  ponymix {increase 5,decrease 5,toggle}; \
+  ~/.panel/showVol.sh
 
 super + {F1, F2, F3}:
-	n={0,1,2} ; \
-	$BSPWM_DIR/move_all.zsh $n ; \
-	pactl set-default-sink $n ; \
-	~/.panel/showVol.sh
+  n={0,1,2} ; \
+  $BSPWM_DIR/move_all.zsh $n ; \
+  pactl set-default-sink $n ; \
+  ~/.panel/showVol.sh
 
 ## applications
 super + d
-	gmrun
+  gmrun
 #       dmenu_run
 
 super + shift + space
-	termite -c ~/.config/termite/config
+  termite -c ~/.config/termite/config
 
 super + space
-	~/.term/bsp_toggle_term.zsh
+  ~/.term/bsp_toggle_term.zsh
 
 ## misc
 # launch video link from clipboard with mpv
 super + p
-	mpv $(youtube-dl -g "$(xsel)")
+  mpv $(youtube-dl -g "$(xsel)")
 
 #launch livestreamer with clipboard url
 super + shift + p
-	lser $(xsel)
+  lser $(xsel)
 
 #launch mpv with the url of all youtube embedded videos on the page
 super + alt + p
-	play-sc2cast $(xsel)
+  play-sc2cast $(xsel)
+
+### X
+super + ctrl + y
+  sleep 1; \
+  xset dpms force standby
 
 ## remapped keys
 shift + Escape
-	xdotool key Caps_Lock
+  xdotool key Caps_Lock
 
 ## reload sxhkd
 super + Escape
-	pkill -USR1 -x sxhkd
+  pkill -USR1 -x sxhkd
 
 ## kill x
 super + alt + shift + backspace
-	pkill X
+  pkill X
