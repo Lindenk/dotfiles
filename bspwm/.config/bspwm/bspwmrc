@@ -34,8 +34,13 @@ bspc config external_rules_command=./bsp_erules
 
   # launch stuff
   chromium &
-  steam -silent &
   pidgin &
+
+  {
+    steam -silent &
+    sleep 15
+    steam
+  } &
 } &
 
 {
