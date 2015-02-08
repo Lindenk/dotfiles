@@ -5,6 +5,9 @@
 
 MONITOR=$(bspc query -M -d $1)
 
-if [[ $(bspc query -D -m $MONITOR | wc -l) > 1 ]] && [[ -z $(bspc query -W -d $1) ]]; then
+bspc query -T | grep \* 2>/dev/null | sed -r '/\s*m/d;/^\S/d;s/\s*(\w*)\s.*/\1/' | grep -q "^$1$"
+
+if [[ ! $? ]] && [[ $(bspc query -D -m $MONITOR | wc -l) > 1 ]] && [[ -z $(bspc query -W -d $1) ]]; 
+then
   bspc monitor $MONITOR -r $1
 fi
