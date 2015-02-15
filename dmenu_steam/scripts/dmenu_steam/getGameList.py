@@ -3,7 +3,10 @@
 
 import os, xmltodict
 
-gameXMLPath = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'games.xml')
+#gameXMLPath = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'games.xml')
+gameXMLPath = os.getenv('DATA_DIR') + '/games.xml'
+
+print(gameXMLPath)
 
 with open(gameXMLPath, 'r') as gfile:
   game_xml = gfile.read()

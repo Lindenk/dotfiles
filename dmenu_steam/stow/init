@@ -1,0 +1,8 @@
+#!/bin/env sh
+
+. ../scripts/dmenu_steam/VARS.sh
+
+mkdir -p $DATA_DIR
+
+ln -s ../scripts/dmenu_steam/getGamesXML.sh $HOME/bin/dmenu_getGamesXML
+ln -s ../scripts/dmenu_steam/steam_dmenu.sh $HOME/bin/steam_dmenu

@@ -1,8 +1,10 @@
 #!/bin/env bash
 
-here=`dirname $0`
+HERE=$(readlink $0 | xargs dirname)
 
-games=`$here/getGameList.py | sort`
+. $HERE/VARS.sh
+
+games=`$HERE/getGameList.py | sort`
 game=$(echo "$games" | cut -d '`' -f1 | dmenu -i)
 
 if [ -z "$game" ]; then

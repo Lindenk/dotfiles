@@ -1,0 +1,5 @@
+#!/bin/env sh
+
+rm -rf $HOME/.data/dmenu_steam
+rm -f $HOME/bin/steam_dmenu
+rm -f $HOME/bin/dmenu_getGamesXML

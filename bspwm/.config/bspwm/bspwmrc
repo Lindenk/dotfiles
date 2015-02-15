@@ -15,8 +15,9 @@ bspc config remove_disabled_monitors true
 bspc config merge_overlapping_monitors true
 bspc config initial_polarity second_child
 
-bspc monitor DVI-D-0 -d I X
+bspc monitor HDMI-0 -d I X
 bspc monitor DVI-I-0 -d II
+bspc monitor DVI-D-0 -d III
 
 # rules
 bspc rule -a Chromium desktop=I
