@@ -62,7 +62,7 @@ super + d
 #       dmenu_run
 
 super + shift + d
-  ~/.dmenu_steam/steam_dmenu.sh
+  steam_dmenu
 
 super + shift + space
   termite -c ~/.config/termite/config

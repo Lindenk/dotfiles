@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-HERE=$(readlink $0 | xargs dirname)
+HERE=$(readlink -f $0 | xargs dirname)
 
 . $HERE/VARS.sh
 
