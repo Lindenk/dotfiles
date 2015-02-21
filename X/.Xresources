@@ -2,3 +2,22 @@
 dzen2.font:		xft:Tewi:size=11:antialias=true
 dzen2.foreground:	#22EE11
 dzeb2.background:	#181818
+
+
+URxvt.depth: 32
+URxvt.background: [75]#000000
+URxvt*foreground: green
+
+URxvt.scrollBar: false
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+! Font stuff
+URxvt.font: xft:DejaVu Sans Mono for Powerline:size=11
