@@ -65,7 +65,8 @@ super + shift + d
   steam_dmenu
 
 super + shift + space
-  termite -c ~/.config/termite/config
+  urxvt
+  #termite -c ~/.config/termite/config
 
 super + space
   ~/.term/bsp_toggle_term.zsh
