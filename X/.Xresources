@@ -30,3 +30,34 @@ URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 
 URxvt.clipboard.copycmd:  xsel -ib
 URxvt.clipboard.pastecmd: xsel -ob
+
+! Browser
+URxvt.url-launcher: /usr/bin/chromium
+
+
+! Stolen colors, will change later
+!black
+!urxvt.color0:    #1b1d1e
+urxvt.color0:    #121212
+urxvt.color8:    #505354
+!red
+urxvt.color1:    #f8584c
+urxvt.color9:    #f39b95
+!green
+urxvt.color2:    #4CF757
+urxvt.color10:   #95F39B
+!yellow
+urxvt.color3:    #edf84c
+urxvt.color11:   #edf395
+!blue
+urxvt.color4:    #584cf8
+urxvt.color12:   #9b95f3
+!magenta
+urxvt.color5:    #F84CED
+urxvt.color13:   #f395ed
+!cyan
+urxvt.color6:    #4cedf8
+urxvt.color14:   #95edf3
+!white
+urxvt.color7:    #ccccc6
+urxvt.color15:   #f8f8f2
