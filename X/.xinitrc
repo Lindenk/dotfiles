@@ -2,8 +2,9 @@
 xrdb .Xresources
 
 # change caps lock to escape
-xmodmap -e 'clear Lock'
-xmodmap -e 'keycode 0x42=Escape'
+#xmodmap -e 'clear Lock'
+#xmodmap -e 'keycode 0x42=Escape'
+setxkbmap -option caps:escape
 
 # numlock on by default
 numlockx on
