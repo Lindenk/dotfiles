@@ -1,0 +1,10 @@
+{
+	"color_scheme": "Packages/User/SublimeLinter/Tomorrow-Night (SL).tmTheme",
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"tab-size": 2,
+	"theme": "DC_3.sublime-theme",
+	"translate_tabs_to_spaces": true
+}

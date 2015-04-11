@@ -40,10 +40,10 @@ bspc config external_rules_command=./bsp_erules
 
 } &
 
-{
-  sleep 3
-  ~/.term/bsp_init_term.zsh &
-} &
+#{
+#  sleep 3
+#  ~/.term/bsp_init_term.zsh &
+#} &
 
 # panel
 
