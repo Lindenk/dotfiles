@@ -1,6 +1,11 @@
-dmenu_steam/.dmenu_steam/games.xml
-term/.term/termState
-term/.term/windowid
+/dmenu_steam/.dmenu_steam/games.xml
+/term/.term/termState
+/term/.term/windowid
 
-sublime3/.config/sublime-text-3/Packages/User/*
-!sublime3/.config/sublime-text-3/Packages/User/*.sublime-settings
+#Only include sublime settings
+/sublime3/.config/sublime-text-3/*
+!/sublime3/.config/sublime-text-3/Packages
+/sublime3/.config/sublime-text-3/Packages/*
+!/sublime3/.config/sublime-text-3/Packages/User
+/sublime3/.config/sublime-text-3/Packages/User/*
+!/sublime3/.config/sublime-text-3/Packages/User/*.sublime-settings
