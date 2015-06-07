@@ -22,7 +22,7 @@ function _git_prompt() {
     if [ -n "$git_where" ]; then
         echo "%K{yellow}%F{black}$RSEP $BRANCH $git_where%F{yellow}%k$RSEP"
     else
-        echo "%F{black}$RSEP"
+        echo "%k%F{black}$RSEP"
     fi
 }
 
