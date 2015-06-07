@@ -40,6 +40,11 @@ bspc config external_rules_command=./bsp_erules
 
 } &
 
+# stupid hack to automount moogshare at login
+{
+  cd /media/ssh/moogshare
+} &
+
 #{
 #  sleep 3
 #  ~/.term/bsp_init_term.zsh &

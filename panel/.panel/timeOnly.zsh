@@ -5,7 +5,7 @@
 function centerTime {
   while true; do
     time=`date +"%a, %b %e %I:%M"`
-    echo "%{S0}%{c}$time%{S1}$time"
+    echo "%{S0}%{c}$time%{S1}$time%{S2}$time"
     sleep 1
   done
 }

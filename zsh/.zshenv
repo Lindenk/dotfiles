@@ -1,14 +1,10 @@
-typeset -U path
-typeset -U BSPWM_DIR
-typeset -U BROWSER
-typeset -U CACA_GEOMETRY
-
-for f in ~/.config/zsh/paths/*; do
- p=`cat $f`
- PATH="$p:$PATH"
+# Add all paths in config folder to PATH
+_new_path=()
+for f in $HOME/.config/zsh/paths/*; do
+    p=`cat $f`
+    _new_path+=$p
 done
+path=($path ${_new_path:|path})
 
 BSPWM_DIR=(~/.config/bspwm)
 BROWSER=(chromium)
-CACA_GEOMETRY=250x66
-TERM=xterm

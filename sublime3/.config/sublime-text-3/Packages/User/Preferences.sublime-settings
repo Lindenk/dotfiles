@@ -1,9 +1,12 @@
 {
+	"atomic_save": true,
 	"color_scheme": "Packages/User/SublimeLinter/Tomorrow-Night (SL).tmTheme",
+	"hot_exit": true,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
+	"shift_tab_unindent": true,
 	"tab-size": 2,
 	"theme": "DC_3.sublime-theme",
 	"translate_tabs_to_spaces": true
