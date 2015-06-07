@@ -13,5 +13,5 @@ function _prompt_path() {
   echo `sed -r 's/([^\/]?)[^\/]*\//\1\//g' <(echo ${PWD/#"$HOME"/"~"})`
 }
 
-PROMPT='${SSH_TTY:+"%F{red}%n%f@%F{yellow}%m%f "}%F{cyan}%K{black}$(_prompt_path)%k%F{black}$RSEP%f'
+PROMPT='%K{black}${SSH_TTY:+"%F{red}%n%f@%F{yellow}%m%f "}%F{cyan}$(_prompt_path)%k%F{black}$RSEP%f'
 RPS1="%(?..%F{red}$LSEP%F{black}%K{red}$CROSS %k%f)"
