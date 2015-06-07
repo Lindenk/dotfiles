@@ -13,5 +13,18 @@ function _prompt_path() {
   echo `sed -r 's/([^\/]?)[^\/]*\//\1\//g' <(echo ${PWD/#"$HOME"/"~"})`
 }
 
-PROMPT='%K{black}${SSH_TTY:+"%F{red}%n%f@%F{yellow}%m%f "}%F{cyan}$(_prompt_path)%k%F{black}$RSEP%f'
+# Git stuff
+function _git_branch() {
+    git name-rev --name-only --no-undefined --always HEAD 2> /dev/null
+}
+function _git_prompt() {
+    local git_where="$(_git_branch)"
+    if [ -n "$git_where" ]; then
+        echo "%K{yellow}%F{black}$RSEP $BRANCH $git_where%F{yellow}%k$RSEP"
+    else
+        echo "%F{black}$RSEP"
+    fi
+}
+
+PROMPT='%K{black}${SSH_TTY:+"%F{red}%n%f@%F{yellow}%m%f "}%F{cyan}$(_prompt_path)$(_git_prompt)%k%f '
 RPS1="%(?..%F{red}$LSEP%F{black}%K{red}$CROSS %k%f)"
