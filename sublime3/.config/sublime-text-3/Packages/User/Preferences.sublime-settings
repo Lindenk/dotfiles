@@ -7,6 +7,7 @@
 	[
 		"Vintage"
 	],
+	"remember_open_files": false,
 	"shift_tab_unindent": true,
 	"tab-size": 2,
 	"theme": "DC_3.sublime-theme",

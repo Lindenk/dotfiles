@@ -15,7 +15,7 @@ function _prompt_path() {
 
 # Git stuff
 function _git_branch() {
-    git name-rev --name-only --no-undefined --always HEAD 2> /dev/null
+    git rev-parse --abbrev-ref HEAD 2> /dev/null
 }
 function _git_prompt() {
     local git_where="$(_git_branch)"
