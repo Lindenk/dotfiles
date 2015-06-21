@@ -9,3 +9,6 @@
 !/sublime3/.config/sublime-text-3/Packages/User
 /sublime3/.config/sublime-text-3/Packages/User/*
 !/sublime3/.config/sublime-text-3/Packages/User/*.sublime-settings
+
+#Secrets
+/secrets
