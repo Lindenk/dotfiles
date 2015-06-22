@@ -24,9 +24,11 @@ extract () {
 local _TEMP_HISTFILE_PATH="/tmp/""$USER""_zsh_history_tmp"
 histoff () {
   HISTFILE=$_TEMP_HISTFILE_PATH
+  touch $_TEMP_HISTFILE_PATH
+  chmod 600 $_TEMP_HISTFILE_PATH
 }
 
 histon () {
   HISTFILE=$_HISTFILE
-  rm $_TEMP_HISTFILE_PATH
+  rm $_TEMP_HISTFILE_PATH 2> /dev/null
 }
