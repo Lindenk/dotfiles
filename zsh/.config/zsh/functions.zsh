@@ -21,7 +21,6 @@ extract () {
    fi
 }
 
-<<<<<<< HEAD
 #cd () {
 #  if [ $# -eq 1 ]; then
 #    if [ "$1" -eq "..." ]; then
@@ -33,7 +32,7 @@ extract () {
 #    _cd $@
 #  fi
 #}
-=======
+
 local _TEMP_HISTFILE_PATH="/tmp/""$USER""_zsh_history_tmp"
 histoff () {
   HISTFILE=$_TEMP_HISTFILE_PATH
@@ -45,4 +44,4 @@ histon () {
   HISTFILE=$_HISTFILE
   rm $_TEMP_HISTFILE_PATH 2> /dev/null
 }
->>>>>>> d77775a3cedb58ada6b138a0f4e27cc64ff89575
+
