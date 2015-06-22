@@ -20,3 +20,13 @@ extract () {
        echo "'$1' is not a valid file!"
    fi
 }
+
+local _TEMP_HISTFILE_PATH="/tmp/""$USER""_zsh_history_tmp"
+histoff () {
+  HISTFILE=$_TEMP_HISTFILE_PATH
+}
+
+histon () {
+  HISTFILE=$_HISTFILE
+  rm $_TEMP_HISTFILE_PATH
+}
