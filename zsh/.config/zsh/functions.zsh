@@ -20,3 +20,15 @@ extract () {
        echo "'$1' is not a valid file!"
    fi
 }
+
+#cd () {
+#  if [ $# -eq 1 ]; then
+#    if [ "$1" -eq "..." ]; then
+#      _cd ..; _cd ..
+#    elif [ "$1" -eq "...."]
+#      _cd ..; _cd ..; _cd ..
+#    fi
+#  else
+#    _cd $@
+#  fi
+#}
