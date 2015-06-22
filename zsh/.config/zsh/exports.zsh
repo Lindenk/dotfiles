@@ -13,3 +13,4 @@ export CLICOLOR=1
 export LESS='--ignore-case --raw-control-chars'
 export PAGER='less'
 export EDITOR='subl3 -w'
+export GPG_TTY=`tty`
