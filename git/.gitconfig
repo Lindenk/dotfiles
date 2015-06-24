@@ -1,3 +1,16 @@
 [user]
 	email = ztaticnull@gmail.com
 	name = Linden Krouse
+
+[merge]
+tool = sublimerge
+
+[mergetool "sublimerge"]
+cmd = subl3 -n --wait \"$REMOTE\" \"$BASE\" \"$LOCAL\" \"$MERGED\" --command \"sublimerge_diff_views\"
+trustExitCode = false
+
+[diff]
+tool = sublimerge
+
+[difftool "sublimerge"]
+cmd = subl3 -n --wait \"$REMOTE\" \"$LOCAL\" --command \"sublimerge_diff_views {\\\"left_read_only\\\": true, \\\"right_read_only\\\": true}\"

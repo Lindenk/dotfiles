@@ -20,3 +20,28 @@ extract () {
        echo "'$1' is not a valid file!"
    fi
 }
+
+#cd () {
+#  if [ $# -eq 1 ]; then
+#    if [ "$1" -eq "..." ]; then
+#      _cd ..; _cd ..
+#    elif [ "$1" -eq "...."]
+#      _cd ..; _cd ..; _cd ..
+#    fi
+#  else
+#    _cd $@
+#  fi
+#}
+
+local _TEMP_HISTFILE_PATH="/tmp/""$USER""_zsh_history_tmp"
+histoff () {
+  HISTFILE=$_TEMP_HISTFILE_PATH
+  touch $_TEMP_HISTFILE_PATH
+  chmod 600 $_TEMP_HISTFILE_PATH
+}
+
+histon () {
+  HISTFILE=$_HISTFILE
+  rm $_TEMP_HISTFILE_PATH 2> /dev/null
+}
+
