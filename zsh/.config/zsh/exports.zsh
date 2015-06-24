@@ -13,4 +13,9 @@ export CLICOLOR=1
 export LESS='--ignore-case --raw-control-chars'
 export PAGER='less'
 export EDITOR='subl3 -w'
+
+# GPG encryption prompt
 export GPG_TTY=`tty`
+
+# SRC
+export RUST_SRC_PATH='/usr/share/rust/src'
