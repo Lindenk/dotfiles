@@ -2,7 +2,6 @@
 	"atomic_save": true,
 	"color_scheme": "Packages/User/SublimeLinter/Tomorrow-Night (SL).tmTheme",
 	"hot_exit": false,
-	"remember_open_files": false,
 	"ignored_packages":
 	[
 		"Vintage"

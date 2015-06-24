@@ -16,12 +16,17 @@
 		"JavaScriptNext - ES6 Syntax",
 		"LESS",
 		"Package Control",
+		"PKGBUILD",
+		"Rust",
+		"RustAutoComplete",
+		"RustCodeFormatter",
 		"SideBarEnhancements",
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"SublimeREPL",
 		"Sublimerge Pro",
 		"Theme - DC",
+		"TOML",
 		"Tomorrow Color Schemes"
 	]
 }
