@@ -10,4 +10,4 @@ function centerTime {
   done
 }
 
-centerTime | bar -B "#70000000" -F "#FF00F000" -f "-*-*-*-*-15-*-*-*-c-*-*-1"  -g "x20" -p
+centerTime | lemonbar -B "#70000000" -F "#FF00F000" -f "-*-*-*-*-15-*-*-*-c-*-*-1"  -g "x20" -p
