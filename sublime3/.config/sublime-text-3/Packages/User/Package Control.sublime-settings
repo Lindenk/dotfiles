@@ -21,12 +21,18 @@
 		"RustAutoComplete",
 		"RustCodeFormatter",
 		"SideBarEnhancements",
+		"Stino",
 		"SublimeCodeIntel",
+		"SublimeGDB",
 		"SublimeLinter",
 		"SublimeREPL",
 		"Sublimerge Pro",
 		"Theme - DC",
 		"TOML",
 		"Tomorrow Color Schemes"
+	],
+	"repositories":
+	[
+		"https://github.com/Robot-Will/Stino/tree/new-stino"
 	]
 }
