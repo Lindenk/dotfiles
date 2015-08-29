@@ -19,3 +19,6 @@ export GPG_TTY=`tty`
 
 # SRC
 export RUST_SRC_PATH='/usr/share/rust/src'
+
+# Paths
+export GOPATH='/bin/go'
