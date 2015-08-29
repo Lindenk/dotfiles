@@ -5,7 +5,7 @@ dzeb2.background:	#181818
 
 !!! URxvt !!!
 
-! Extensions
+! Extensions (requires urxvt-perls package on arch)
 URxvt.perl-ext-common: default,clipboard
 
 ! Coloring and such

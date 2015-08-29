@@ -54,7 +54,7 @@ XF86Audio{RaiseVolume,LowerVolume,Mute}
   ~/.panel/showVol.sh
 
 super + {F1, F2, F3, F4}
-  n={alsa_output.pci-0000_00_14.2.analog-stereo,alsa_output.usb-Logitech_Logitech_Wireless_Headset_H760-00-H760.analog-stereo,alsa_output.hw_1_7,alsa_output.hw_1_8} ; \
+  n={alsa_output.pci-0000_00_14.2.analog-stereo,alsa_output.usb-Logitech_Logitech_Wireless_Headset_H760-00.analog-stereo,alsa_output.hw_1_7,alsa_output.hw_1_8} ; \
   $BSPWM_DIR/move_all.zsh $n ; \
   pactl set-default-sink $n ; \
   ~/.panel/showVol.sh
@@ -70,6 +70,9 @@ super + shift + d
 super + shift + space
   urxvt
   #termite -c ~/.config/termite/config
+
+super + ctrl + space
+  urxvt -e ranger ~/
 
 super + space
   ~/.term/bsp_toggle_term.zsh

@@ -35,15 +35,15 @@ bspc config external_rules_command=./bsp_erules
 
   # launch stuff
   chromium &
-  pidgin &
+#  pidgin &
   steam -silent &
 
 } &
 
 # stupid hack to automount moogshare at login
-{
-  cd /media/ssh/moogshare
-} &
+#{
+#  cd /media/ssh/moogshare
+#} &
 
 #{
 #  sleep 3
