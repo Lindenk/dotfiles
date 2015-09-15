@@ -1,19 +1,19 @@
 extract () {
    if [ -f $1 ] ; then
        case $1 in
-        *.tar.bz2)      tar xvjf $1 && cd $(basename "$1" .tar.bz2) ;;
-        *.tar.gz)       tar xvzf $1 && cd $(basename "$1" .tar.gz) ;;
-        *.tar.xz)       tar Jxvf $1 && cd $(basename "$1" .tar.xz) ;;
-        *.bz2)          bunzip2 $1 && cd $(basename "$1" /bz2) ;;
-        *.rar)          unrar x $1 && cd $(basename "$1" .rar) ;;
-        *.gz)           gunzip $1 && cd $(basename "$1" .gz) ;;
-        *.xz)           unxz $1 && cd $(basename "$1" .xz) ;;
-        *.tar)          tar xvf $1 && cd $(basename "$1" .tar) ;;
-        *.tbz2)         tar xvjf $1 && cd $(basename "$1" .tbz2) ;;
-        *.tgz)          tar xvzf $1 && cd $(basename "$1" .tgz) ;;
-        *.zip)          unzip $1 && cd $(basename "$1" .zip) ;;
-        *.Z)            uncompress $1 && cd $(basename "$1" .Z) ;;
-        *.7z)           7z x $1 && cd $(basename "$1" .7z) ;;
+        *.tar.bz2)      tar xvjf $1 $( [[ -n $2 ]] && echo "-C $2");;
+        *.tar.gz)       tar xvzf $1 $( [[ -n $2 ]] && echo "-C $2");;
+        *.tar.xz)       tar Jxvf $1 $( [[ -n $2 ]] && echo "-C $2");;
+        *.bz2)          bunzip2 $1 $2;;
+        *.rar)          unrar x $1;;
+        *.gz)           gunzip $1;;
+        *.xz)           unxz $1;;
+        *.tar)          tar xvf $1;;
+        *.tbz2)         tar xvjf $1;;
+        *.tgz)          tar xvzf $1;;
+        *.zip)          unzip $1 $( [[ -n $2 ]] && echo "-d $2");;
+        *.Z)            uncompress $1 ;;
+        *.7z)           7z x $1;;
         *)              echo "don't know how to extract '$1'..." ;;
        esac
    else
