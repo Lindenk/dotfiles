@@ -80,7 +80,8 @@ super + space
 ## misc
 # launch video link from clipboard with mpv
 super + p
-  mpv $(youtube-dl -g "$(xsel)")
+  #mpv $(youtube-dl -g "$(xsel)")
+  mpv $(xsel)
 
 #launch livestreamer with clipboard url
 super + shift + p
