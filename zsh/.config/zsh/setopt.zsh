@@ -6,6 +6,7 @@ setopt auto_menu
 
 # selection
 setopt extendedglob
+setopt dotglob
 
 # history
 setopt append_history # Allow multiple terminal sessions to all append to one zsh command history
