@@ -1,0 +1,7 @@
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+
+[submodule "common/nano/.config/nano/syntax_highlighting"]
+	path = common/nano/.config/nano/syntax_highlighting
+	url = https://github.com/serialhex/nano-highlight.git

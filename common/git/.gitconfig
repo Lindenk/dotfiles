@@ -1,0 +1,17 @@
+[user]
+	email = ztaticnull@gmail.com
+	name = Linden Krouse
+
+[merge]
+	tool = meld
+
+[mergetool "vscode"]
+cmd = visual-studio-code -n --wait --diff "$REMOTE" "$BASE" "$LOCAL" "$MERGED"
+#trustExitCode = false
+
+[diff]
+tool = vscode
+
+[difftool "vscode"]
+cmd = visual-studio-code -n --wait --diff "$REMOTE" "$LOCAL"
+

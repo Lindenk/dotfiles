@@ -1,0 +1,14 @@
+# These configurations expect the user to be running X #
+
+- defaults:
+    link:
+        create: true
+        relink: true
+
+ # include common config
+- shell:
+    - 
+        command: ./install common.conf.yaml
+        stdout: true
+
+# 

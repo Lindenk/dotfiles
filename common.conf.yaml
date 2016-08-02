@@ -1,0 +1,49 @@
+# This is a configuration that is shared among all installs of these dotfiles #
+
+- defaults:
+    link:
+        create: true
+        relink: true
+
+- clean: ['~', '~/.config', '~/bin']
+
+# Bin
+
+# Git
+- link:
+    ~/.gitconfig:
+        path: common/git/.gitconfig
+
+# GPG
+- link:
+    ~/.gnupg:
+        path: common/gpg/.gnupg
+
+# Less
+- link:
+    ~/.lesskey:
+        path: common/less/.lesskey
+    
+# Nano
+- link:
+    ~/.nanorc:
+        path: common/nano/.nanorc
+    ~/.config/nano/syntax_highlighting:
+        path: common/nano/.config/nano/syntax_highlighting
+
+# Ranger
+- link:
+    ~/.config/ranger:
+        path: common/ranger/.config/ranger
+
+# Zsh
+- link: 
+    ~/.config/zsh:
+        path: common/zsh/.config/zsh
+#    ~/.zprofile:
+#        path: common/zsh/.zprofile
+    ~/.zshenv:
+        path: common/zsh/.zshenv
+    ~/.zshrc:
+        path: common/zsh/.zshrc
+        

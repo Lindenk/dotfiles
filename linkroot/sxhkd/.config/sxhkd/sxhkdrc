@@ -1,0 +1,122 @@
+## bspwm
+
+# control
+super + alt + Escape
+  bspc quit
+
+super + shift + q
+  bspc node focused -c
+super + shift + alt + q
+  bspc node focused -k
+
+# organization
+super + {_,shift + }{j,l,i,k}
+  bspc node -{f,s} {west,east,north,south}
+
+super + ctrl + alt + {j,l,i,k}
+  bspc node --presel {left,right,up,down}
+
+super + {_,shift} + v
+  bspc desktop --flip {vertical,horizontal}
+
+super + {_,shift} + {1-9,0}
+  $BSPWM_DIR/createAndCleanUpExec.zsh "{desktop -f,window -d}" "{I,II,III,IV,V,VI,VII,VIII,IX,X}"
+
+super + {_,shift} + Tab
+  $BSPWM_DIR/cleanUpExec.zsh "bspc desktop -f {next,prev}"
+
+super + ctrl + {j,l}
+  bspc monitor -f {prev,next}
+
+super + ctrl + shift + {j,l}
+  bspc desktop -m {prev,next} -f
+
+super + {s,f}
+  bspc node -t \~{floating,fullscreen}
+
+super + alt + {j,k,l,i}
+  bspc node -e {left -10,down +10,right +10,up -10}
+
+# mouse
+super + button{1-3}
+  bspc pointer -g {move,resize_side,resize_corner}
+
+super + !button{1-3}
+  bspc pointer -t %i %i
+
+~button1
+  bspc pointer -g focus
+
+
+## sound
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+  ponymix {increase 5,decrease 5,toggle}; \
+  echo a > /tmp/panel/volume
+
+XF86AudioPlay
+  mpc toggle
+
+super + {F1, F2, F3, F4}
+  n={alsa_output.pci-0000_00_14.2.analog-stereo,alsa_output.usb-Logitech_Logitech_Wireless_Headset_H760-00.analog-stereo,alsa_output.hw_1_7,alsa_output.hw_1_8} ; \
+  $BSPWM_DIR/move_all.zsh $n ; \
+  pactl set-default-sink $n ; \
+  echo a > /tmp/panel/volume
+
+## applications
+super + d
+  rofi -show run
+#  gmrun
+#       dmenu_run
+
+super + shift + d
+  steam_dmenu
+
+super + shift + space
+  urxvt
+  #termite -c ~/.config/termite/config
+
+super + ctrl + space
+  urxvt -e ranger ~/
+
+super + space
+  ~/.term/bsp_toggle_term.zsh
+
+## misc
+# launch video link from clipboard with mpv
+super + p
+  mpv $(xsel)
+
+#launch livestreamer with clipboard url
+super + shift + p
+  opentwitchstream.sh
+#  lser $(xsel)
+
+#launch mpv with the url of all youtube embedded videos on the page
+super + alt + p
+  play-sc2cast $(xsel)
+
+# Spellcheck
+super + shift + s
+  rofi_spellcheck
+
+# Play music
+super + m
+  rofi_select_song
+
+
+### X
+super + ctrl + y
+  sleep 1; \
+  xset dpms force standby
+
+## remapped keys
+shift + Escape
+  xdotool key Caps_Lock
+
+## reload sxhkd
+super + Escape
+  pkill -USR1 -x sxhkd
+
+## kill x
+#super + alt + shift + backspace
+#  pkill X
