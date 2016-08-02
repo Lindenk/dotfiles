@@ -5,7 +5,7 @@
         create: true
         relink: true
 
- # include common config
+# include common config
 - shell:
     - 
         command: ./install common.conf.yaml
@@ -18,7 +18,37 @@
     ~/scripts/rofi_gmusic.sh:
         path: desktop/scripts/rofi_gmusic/rofi_select_song.sh
 
+# Mpd
+- link:
+    ~/.config/mpd:
+        path: desktop/mpd
+
+# Dunst
+- link:
+    ~/.config/dunst:
+        path: desktop/dunst
+
+# Fonts
+- shell:
+    - 
+        command: ./desktop/fonts/powerline/install.sh
+        stdout: true
+
 # Zsh
 - link: 
     ~/.zprofile:
         path: desktop/zsh/.zprofile
+
+# Xresources. NOTE: This must come before anything that adds to Xresources
+- shell:
+    - mkdir -p $HOME/.config/X
+    - cp desktop/X/.Xresources $HOME/.config/X/.Xresources
+- link:
+    ~/.Xresources: 
+        path: $HOME/.config/X/.Xresources
+
+# URxvt
+- shell:
+    - [cat desktop/urxvt/.Xresources >> $HOME/.config/X/.Xresources, 
+        Adding URxvt to .Xresources]
+

@@ -1,0 +1,59 @@
+
+!!! URxvt !!!
+
+! Extensions (requires urxvt-perls package on arch)
+URxvt.perl-ext-common: default,clipboard
+
+! Coloring and such
+URxvt.depth: 32
+URxvt.background: [75]#000000
+URxvt*foreground: green
+
+! Scrolling
+URxvt.scrollBar: false
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
+
+! Font stuff
+URxvt.font: xft:DejaVu Sans Mono for Powerline:size=11
+
+! Copy paste
+URxvt.iso14755: False
+URxvt.clipboard.autocopy: False
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+
+URxvt.clipboard.copycmd:  xsel -ib
+URxvt.clipboard.pastecmd: xsel -ob
+
+! Browser
+URxvt.url-launcher: /usr/bin/conkeror
+
+
+! Stolen colors, will change later
+!black
+!urxvt.color0:    #1b1d1e
+urxvt.color0:    #121212
+urxvt.color8:    #505354
+!red
+urxvt.color1:    #f8584c
+urxvt.color9:    #f39b95
+!green
+urxvt.color2:    #4CF757
+urxvt.color10:   #95F39B
+!yellow
+urxvt.color3:    #edf84c
+urxvt.color11:   #edf395
+!blue
+urxvt.color4:    #584cf8
+urxvt.color12:   #9b95f3
+!magenta
+urxvt.color5:    #F84CED
+urxvt.color13:   #f395ed
+!cyan
+urxvt.color6:    #4cedf8
+urxvt.color14:   #95edf3
+!white
+urxvt.color7:    #ccccc6
+urxvt.color15:   #f8f8f2
