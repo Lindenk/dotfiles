@@ -45,3 +45,10 @@ histon () {
   rm $_TEMP_HISTFILE_PATH 2> /dev/null
 }
 
+_ls_or_exa () {
+  if which exa >/dev/null; then
+    exa $@
+  else
+    /bin/ls $@
+  fi
+}

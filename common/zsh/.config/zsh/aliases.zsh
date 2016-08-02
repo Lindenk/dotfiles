@@ -1,9 +1,7 @@
 # ls
-alias ls_builtin='ls'
-alias ls='exa'
-alias la='exa -al'
-alias ll='exa -l'
-alias sl='exa'
+alias ls='_ls_or_exa'
+alias la='ls -al'
+alias sl='ls'
 
 # grep
 alias grep='grep --color=auto'
