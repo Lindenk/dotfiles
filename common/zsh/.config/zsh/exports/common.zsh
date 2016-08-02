@@ -12,7 +12,6 @@ export CLICOLOR=1
 # Editor
 export LESS='--ignore-case --raw-control-chars'
 export PAGER='less'
-export EDITOR='subl3 -w'
 
 # GPG encryption prompt
 export GPG_TTY=`tty`
@@ -22,3 +21,4 @@ export RUST_SRC_PATH='/usr/share/rust/src'
 
 # Paths
 export GOPATH=$(echo ~/.go)
+

@@ -5,3 +5,6 @@
 [submodule "common/nano/.config/nano/syntax_highlighting"]
 	path = common/nano/.config/nano/syntax_highlighting
 	url = https://github.com/serialhex/nano-highlight.git
+[submodule "common/zsh/zsh-syntax-highlighting"]
+	path = common/zsh/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git

@@ -1,4 +1,5 @@
 # ls
+alias ls_builtin='ls'
 alias ls='exa'
 alias la='exa -al'
 alias ll='exa -l'

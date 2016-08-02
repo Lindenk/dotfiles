@@ -1,0 +1,1 @@
+export BSPWM_DIR=(~/.config/bspwm)

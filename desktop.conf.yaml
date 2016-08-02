@@ -11,4 +11,14 @@
         command: ./install common.conf.yaml
         stdout: true
 
-# 
+# Scripts
+- link:
+    ~/scripts/rofi_spellcheck.sh:
+        path: desktop/scripts/rofi_spellcheck.sh
+    ~/scripts/rofi_gmusic.sh:
+        path: desktop/scripts/rofi_gmusic/rofi_select_song.sh
+
+# Zsh
+- link: 
+    ~/.zprofile:
+        path: desktop/zsh/.zprofile
