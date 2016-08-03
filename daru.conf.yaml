@@ -8,3 +8,14 @@
     - 
         command: ./install desktop.conf.yaml
         stdout: true
+
+
+# bspwm
+- link:
+    ~/.config/bspwm:
+        path: daru/bspwm/.config/bspwm
+
+# sxhkd
+- link:
+    ~/.config/sxhkd:
+        path: daru/sxhkd/.config/sxhkd
