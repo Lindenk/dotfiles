@@ -16,6 +16,10 @@ export PAGER='less'
 # GPG encryption prompt
 export GPG_TTY=`tty`
 
+# Taskwarrior
+export TASKRC=~/.config/taskwarrior/taskrc
+export TASKDATA=~/.local/share/taskwarrior
+
 # SRC
 export RUST_SRC_PATH='/usr/share/rust/src'
 

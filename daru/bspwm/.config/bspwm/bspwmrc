@@ -1,8 +1,5 @@
 #!/bin/env zsh
 
-# start compton
-compton -b --config ~/.config/compton/compton.conf
-
 # bsp config
 bspc config border_width 1
 bspc config window_gap  12
@@ -15,23 +12,31 @@ bspc config remove_disabled_monitors true
 bspc config merge_overlapping_monitors true
 bspc config initial_polarity second_child
 
-bspc monitor DP-0 -d I
-bspc monitor DVI-I-0 -d II
-bspc monitor DVI-D-0 -d X
+
+# Make desktops
+_WM_MONITORS=("${(@f)$(xrandr --listactivemonitors | tail -n +2 | awk '{print $4}')}")
+_DESKTOPS=(1 2 3 4 5)
+
+for m in $_WM_MONITORS; do
+  bspc monitor "$m" -d "${_DESKTOPS[@]/%/_$m}"
+done 
 
 # rules
 #bspc rule -a Chromium desktop=I
-bspc rule -a Firefox desktop=I
-bspc rule -a Steam desktop=II
-bspc rule -a Pidgin desktop=X
+#bspc rule -a Firefox desktop=I
+#bspc rule -a Steam desktop=II
+#bspc rule -a Pidgin desktop=X
 
-bspc config external_rules_command=./bsp_erules
+# bspc config external_rules_command=./bsp_erules
+
+# start compton
+compton -b
 
 # launch stuff
 {
   # wait for an internet connection
   while ! wget http://google.com -O- 2>/dev/null | grep -q Lucky; do
-    sleep .1
+    sleep .2
   done
 
   # launch stuff
@@ -43,18 +48,14 @@ bspc config external_rules_command=./bsp_erules
 
 } &
 
-# stupid hack to automount moogshare at login
-#{
-#  cd /media/ssh/moogshare
-#} &
 
-#{
+# {
 #  sleep 3
 #  ~/.term/bsp_init_term.zsh &
-#} &
+# } &
 
 # panel
 yabar &
 
-# compton
-compton &
+
+disown

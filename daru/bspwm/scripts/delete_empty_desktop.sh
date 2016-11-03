@@ -6,3 +6,4 @@ if [ -z $(bspc query -D -d "$1.occupied") ]; then
     bspc desktop "$1" -r
 fi
 
+I II III IV V VI VII IIX IX X

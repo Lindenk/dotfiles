@@ -36,6 +36,11 @@
     ~/.config/ranger:
         path: common/ranger/.config/ranger
 
+# Taskwarrior
+- link:
+    ~/.config/taskwarrior/taskrc:
+        path: common/taskwarrior/taskrc
+
 # Zsh
 - link: 
     ~/.config/zsh:

@@ -19,3 +19,8 @@
 - link:
     ~/.config/sxhkd:
         path: daru/sxhkd/.config/sxhkd
+
+# yabar
+- link:
+    ~/.config/yabar:
+        path: daru/yabar

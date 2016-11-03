@@ -4,33 +4,44 @@
 super + alt + Escape
   bspc quit
 
+## Close window ##
 super + shift + q
   bspc node focused -c
+
+## Kill window ##
 super + shift + alt + q
   bspc node focused -k
 
-# organization
-super + {_,shift + }{j,l,i,k}
-  bspc node -{f,s} {west,east,north,south}
 
-super + ctrl + alt + {j,l,i,k}
-  bspc node --presel {left,right,up,down}
+# Organization #
+## Focus ##
+super + {j,l,i,k}
+  bspc node -f {west,east,north,south}
 
-super + {_,shift} + v
-  bspc desktop --flip {vertical,horizontal}
+super + {1-5}
+  bspc desktop -f {1,2,3,4,5}_$(bspc query -M -m)
 
-super + {_,shift} + {1-9,0}
-  $BSPWM_DIR/createAndCleanUpExec.zsh "{desktop -f,window -d}" "{I,II,III,IV,V,VI,VII,VIII,IX,X}"
+super + ctrl + {j,l,i,k}
+  bspc monitor -f {west,east,north,south}
 
-super + {_,shift} + Tab
-  $BSPWM_DIR/cleanUpExec.zsh "bspc desktop -f {next,prev}"
+super + semicolon
+  ~/scripts/bspwm/select_window.sh
 
-super + ctrl + {j,l}
-  bspc monitor -f {prev,next}
+## Move ## 
+super + shift + {j,l,i,k}
+  bspc node -s {west,east,north,south}
 
-super + ctrl + shift + {j,l}
-  bspc desktop -m {prev,next} -f
+super + shift + {1-5}
+  bspc node -d {1,2,3,4,5}_$(bspc query -M -m)
 
+super + shift + alt + {j,l,i,k}
+  bspc node -m {west,east,north,south}
+
+super + ctrl + shift + {j,l,i,k}
+  ~/scripts/bspwm/swap_desktop_to_monitor.sh {west,east,north,south}
+
+
+# Window flags #
 super + {s,f}
   bspc node -t \~{floating,fullscreen}
 
@@ -69,7 +80,7 @@ super + d
 #       dmenu_run
 
 super + shift + d
-  steam_dmenu
+  ~/scripts/dmenu_steam
 
 super + shift + space
   urxvt
