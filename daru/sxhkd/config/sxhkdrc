@@ -19,7 +19,7 @@ super + {j,l,i,k}
   bspc node -f {west,east,north,south}
 
 super + {1-5}
-  bspc desktop -f {1,2,3,4,5}_$(bspc query -M -m)
+  bspc desktop -f {1,2,3,4,5}_$(bspc query -M -m --names)
 
 super + ctrl + {j,l,i,k}
   bspc monitor -f {west,east,north,south}
@@ -32,7 +32,7 @@ super + shift + {j,l,i,k}
   bspc node -s {west,east,north,south}
 
 super + shift + {1-5}
-  bspc node -d {1,2,3,4,5}_$(bspc query -M -m)
+  bspc node -d {1,2,3,4,5}_$(bspc query -M -m --names)
 
 super + shift + alt + {j,l,i,k}
   bspc node -m {west,east,north,south}

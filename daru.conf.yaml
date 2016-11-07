@@ -13,12 +13,14 @@
 # bspwm
 - link:
     ~/.config/bspwm:
-        path: daru/bspwm/.config/bspwm
+        path: daru/bspwm/config
+    ~/scripts/bspwm:
+        path: daru/bspwm/scripts
 
 # sxhkd
 - link:
     ~/.config/sxhkd:
-        path: daru/sxhkd/.config/sxhkd
+        path: daru/sxhkd/config
 
 # yabar
 - link:
