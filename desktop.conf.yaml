@@ -17,6 +17,8 @@
         path: desktop/scripts/rofi_spellcheck.sh
     ~/scripts/rofi_gmusic.sh:
         path: desktop/scripts/rofi_gmusic/rofi_select_song.sh
+    ~/scripts/pass-rofi.sh:
+        path: desktop/gpg/scripts/pass-rofi.sh
 
 # Mpd
 - link:
@@ -33,6 +35,15 @@
     - 
         command: ./desktop/fonts/powerline/install.sh
         stdout: true
+
+# GPG
+- shell:
+    - mkdir -p "$HOME/.gnupg"
+    - cp "desktop/gpg/.gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
+    - sed -i "s~\$HOME~$HOME~" "$HOME/.gnupg/gpg-agent.conf"
+- link:
+    ~/scripts/pinentry-rofi.sh:
+        path: desktop/gpg/scripts/pinentry-rofi.sh
 
 # Zsh
 - link: 

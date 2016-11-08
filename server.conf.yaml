@@ -8,3 +8,7 @@
     - 
         command: ./install common.conf.yaml
         stdout: true
+
+- link:
+    ~/.gnupg/gpg-agent.conf:
+        path: server/gpg/.gnupg/gpg-agent.conf

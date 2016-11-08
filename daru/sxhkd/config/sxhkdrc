@@ -114,6 +114,9 @@ super + shift + s
 super + m
   rofi_select_song
 
+# Copy password
+super + c 
+  ~/scripts/pass-rofi.sh
 
 ### X
 super + ctrl + y

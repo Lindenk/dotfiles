@@ -14,11 +14,6 @@
     ~/.gitconfig:
         path: common/git/.gitconfig
 
-# GPG
-- link:
-    ~/.gnupg/gpg-agent.conf:
-        path: common/gpg/.gnupg/gpg-agent.conf
-
 # Less
 - link:
     ~/.lesskey:
