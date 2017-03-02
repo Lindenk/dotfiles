@@ -1,0 +1,10 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
+# include common config
+- shell:
+    - 
+        command: ./install desktop.conf.yaml
+        stdout: true

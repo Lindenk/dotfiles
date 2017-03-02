@@ -45,6 +45,11 @@
     ~/scripts/pinentry-rofi.sh:
         path: desktop/gpg/scripts/pinentry-rofi.sh
 
+# VSCode
+- link:
+    ~/.config/Code/User/settings.json:
+        path: desktop/vscode/settings.json
+
 # Zsh
 - link: 
     ~/.zprofile:
