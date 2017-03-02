@@ -33,20 +33,20 @@ done
 compton -b
 
 # launch stuff
-{
+#{
   # wait for an internet connection
-  while ! wget http://google.com -O- 2>/dev/null | grep -q Lucky; do
-    sleep .2
-  done
+#  while ! wget http://google.com -O- 2>/dev/null | grep -q Lucky; do
+#    sleep .2
+#  done
 
   # launch stuff
   #chromium &
   #firefox &
-  vivaldi-snapshot &
+  #vivaldi-snapshot &
 #  pidgin &
-  steam -silent &
+#  steam -silent &
 
-} &
+#} &
 
 
 # {
@@ -58,4 +58,4 @@ compton -b
 yabar &
 
 
-disown
+#disown
