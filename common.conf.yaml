@@ -28,8 +28,14 @@
 
 # Ranger
 - link:
-    ~/.config/ranger:
-        path: common/ranger/.config/ranger
+    ~/.config/ranger/commands.py:
+        path: common/ranger/commands.py
+    ~/.config/ranger/scope.sh:
+        path: common/ranger/scope.sh
+    ~/.config/ranger/rifle.conf:
+        path: common/ranger/rifle.conf
+    ~/.config/ranger/rc.conf:
+        path: common/ranger/rc.conf
 
 # Taskwarrior
 - link:

@@ -1,4 +1,21 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "window.menuBarVisibility": "toggle",
+  "editor.wordWrap": "on",
+  "files.associations": {
+      "Jenkinsfile": "groovy",
+      "Vagrantfile": "ruby"
+  },
+  "update.channel": "none",
+  "window.zoomLevel": 0,
+  "keyboard.dispatch": "keyCode",
+  "typescript.check.tscVersion": false,
+
+  "workbench.iconTheme": "material-icon-theme",
+
+  "python.linting.enabled": false,
+
+  "rust.rustLangSrcPath": "/usr/src/rust/src",
+  "vsicons.dontShowNewVersionMessage": true
 }

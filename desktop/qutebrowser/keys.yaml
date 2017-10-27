@@ -1,0 +1,168 @@
+normal:
+  <escape>: clear-keychain ;; search ;; fullscreen --leave
+
+  # Page manip
+  r: reload
+  <f5>: reload
+  R: reload -f
+  <ctrl-f5>: reload -f
+
+  a: set-cmd-text -s :open
+  A: set-cmd-text -s :open -t
+  <ctrl-a>: set-cmd-text -s :open -b
+  <ctrl-A>: set-cmd-text -s :open -w
+
+  # Search
+  # Search forward
+  ";": "set-cmd-text /"
+  ":": "set-cmd-text :"
+  ".": search-next
+  ",": search-prev
+
+  # Tabs
+  x: tab-close
+  X: undo
+
+  d: tab-clone
+
+  # Tab nav
+  <ctrl-j>: tab-prev
+  <ctrl-l>: tab-next
+  h: tab-focus 1
+  H: tab-focus -1
+
+  <ctrl-shift-j>: tab-move -
+  <ctrl-shift-l>: tab-move +
+  <ctrl-h>: tab-move 1
+  <ctrl-H>: tab-move -1
+
+  <ctrl-1>: tab-focus 1
+  <ctrl-2>: tab-focus 2
+  <ctrl-3>: tab-focus 3
+  <ctrl-4>: tab-focus 4
+  <ctrl-5>: tab-focus 5
+  <ctrl-6>: tab-focus 6
+  <ctrl-7>: tab-focus 7
+  <ctrl-8>: tab-focus 8
+  <ctrl-9>: tab-focus 9
+
+  # Back/Forward
+  u: back
+  <back>: back
+  U: back -t
+  o: forward
+  <forward>: forward
+  O: forward -t
+
+  # Selection
+  s: hint all normal
+  S: hint all tab-fg
+  <ctrl-s>: hint all --rapid tab-bg
+  <ctrl-S>: hint all window
+
+  c: hint all yank
+  C: yank pretty-url
+  v: open {clipboard}
+  V: open -t {clipboard}
+
+  D: hint all download
+  <ctrl-d>: download-remove -a
+
+  e: enter-mode insert
+  E: hint inputs
+
+  # Scrolling
+  j: scroll left
+  k: scroll down
+  i: scroll up
+  l: scroll right
+
+  J: scroll-page -0.2 0
+  K: scroll-page 0 0.5
+  I: scroll-page 0 -0.5
+  L: scroll-page 0.2 0
+
+  <ctrl-i>: scroll-prec 0
+  <ctrl-k>: scroll-prec
+
+  # Marks
+  m: enter-mode jump_mark
+  M: enter-mode set_mark
+
+  # Zoom
+  Z: zoom-out
+  z: zoom-in
+  =: zoom
+
+  # Dev
+  <f12>: inspector
+  <ctrl-f12>: view-source
+
+  # Apps
+  <n>: hint links spawn mpv {hint-url}
+  <N>: spawn mpv {clipboard}
+
+  # Misc
+  <f11>: fullscreen
+  <return>: follow-selected
+  <enter>: follow-selected
+  <shift-return>: follow-selected -t
+  <shift-enter>: follow-selected -t
+
+  P: tab-pin
+
+  Y: record-macro
+  y: run-macro
+
+insert:
+  <ctrl-e>: open-editor
+  <escape>: leave-mode
+
+hint:
+  <return>: follow-hint
+  <shift-return>: follow-hint
+  <enter>: follow-hint
+  <shift-enter>: follow-hint
+
+  <escape>: leave-mode
+
+command:
+  <ctrl-i>: command-history-prev
+  <ctrl-k>: command-history-next
+
+  <shift-tab>: completion-item-focus prev
+  <up>: completion-item-focus prev
+
+  <tab>: completion-item-focus next
+  <down>: completion-item-focus next
+
+  <ctrl-tab>: completion-item-focus next-category
+  <ctrl-shift-tab>: completion-item-focus prev-category
+  
+  <return>: command-accept
+  <shift-return>: command-accept
+  <enter>: command-accept
+  <shift-enter>: command-accept
+
+  <ctrl-c>: rl-yank
+
+  <escape>: leave-mode
+
+prompt:
+  <return>: prompt-accept
+  <shift-return>: prompt-accept
+  <enter>: prompt-accept
+  <shift-enter>: prompt-accept
+
+  y: prompt-accept yes
+  n: prompt-accept no
+
+  <shift-tab>: prompt-item-focus prev
+  <up>: prompt-item-focus prev
+
+  <tab>: prompt-item-focus next
+  <down>: prompt-item-focus next
+
+  <ctrl-c>: rl-yank
+
+  <escape>: leave-mode
