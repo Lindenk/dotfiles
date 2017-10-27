@@ -75,3 +75,7 @@
     - [cat desktop/urxvt/.Xresources >> $HOME/.config/X/.Xresources, 
         Adding URxvt to .Xresources]
 
+# Rofi
+- shell:
+    - [cat desktop/rofi/.Xresources >> $HOME/.config/X/.Xresources,
+        Adding rofi to .Xresources]
