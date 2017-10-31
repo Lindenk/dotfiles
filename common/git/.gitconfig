@@ -1,6 +1,7 @@
 [user]
 	email = ztaticnull@gmail.com
 	name = Linden Krouse
+	signingkey = 9D435BF127293F4A
 
 [merge]
 	tool = meld

@@ -45,6 +45,13 @@
     ~/scripts/pinentry-rofi.sh:
         path: desktop/gpg/scripts/pinentry-rofi.sh
 
+# Qutebrowser
+- link:
+    ~/.config/qutebrowser/config.py:
+        path: desktop/qutebrowser/config.py
+    ~/.config/qutebrowser/keys.yaml:
+        path: desktop/qutebrowser/keys.yaml
+
 # VSCode
 - link:
     ~/.config/Code/User/settings.json:
@@ -68,3 +75,7 @@
     - [cat desktop/urxvt/.Xresources >> $HOME/.config/X/.Xresources, 
         Adding URxvt to .Xresources]
 
+# Rofi
+- shell:
+    - [cat desktop/rofi/.Xresources >> $HOME/.config/X/.Xresources,
+        Adding rofi to .Xresources]

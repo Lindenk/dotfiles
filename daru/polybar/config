@@ -1,0 +1,170 @@
+[colors]
+;background = ${xrdb:color0:#222}
+background = #222
+background-alt = #444
+;foreground = ${xrdb:color7:#222}
+foreground = #CCCCFF
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+
+[bar/center]
+inherit = section/main
+monitor = DisplayPort-0
+
+
+[bar/left]
+inherit = section/main
+monitor = DisplayPort-1
+
+[bar/right]
+inherit = section/main
+monitor = DisplayPort-2
+
+[section/main]
+width = 100%
+height = 23
+
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+border-size = 2
+border-color = #00000000
+
+module-margin = 1
+padding-right = 2
+
+font-0 = fixed:pixelsize=10;2
+font-1 = FontAwesome:size=10;2
+
+modules-left = i3
+modules-center = 
+modules-right = volume eth wlan date
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+bottom = false
+
+
+[module/i3]
+type = internal/i3
+
+pin-workspaces = true
+strip-wsnumbers = true
+index-sort = true
+enable-click = true
+enable-scroll = true
+wrapping-scroll = false
+reverse-scroll = true
+fuzzy-match = true
+
+label-active-font = 1
+label-mode-padding = 4
+
+label-focused = %index%
+label-focused-foreground = #CCCCFF
+label-focused-background = #444
+label-focused-padding = 1
+
+label-unfocused = %index%
+label-unfocused-foreground = #555555
+label-unfocused-padding = 1
+
+label-visible = %index%
+label-visible-foreground = #AAAACC
+label-visible-background = #333
+label-visible-padding = 1
+
+label-urgent = %index%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = 1
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-default = 
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = " %h %d,"
+date-alt = " %m-%d-%Y,"
+
+time = %I:%M %p
+time-alt = %H:%M:%S
+
+format-prefix = 
+format-prefix-foreground = ${colors.foreground-alt}
+
+label = %date% %time%
+
+
+[module/eth]
+type = internal/network
+interface = enp6s0
+interval = 2.0
+
+format-connected-prefix = 
+format-connected-prefix-padding-right = 1
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/wlan]
+type = internal/network
+interface = wlp5s0
+interval = 3.0
+
+;format-connected = <ramp-signal> <label-connected>
+format-connected-prefix = 
+format-connected-prefix-padding = 1
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %essid%: %local_ip%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+;ramp-signal-0 = 
+;ramp-signal-1 = 
+;ramp-signal-2 = 
+;ramp-signal-3 = 
+;ramp-signal-4 = 
+;ramp-signal-foreground = ${colors.foreground-alt}
+
+
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume> <label-volume> 
+label-volume = "%{A3:pavucontrol:}%percentage%%{A}"
+label-volume-foreground = ${root.foreground}
+
+label-muted  = "%{A3:pavucontrol:}🔇 Muted%{A}"
+format-muted-foreground = ${colors.foreground-alt}
+
+ramp-volume-foreground = ${colors.foreground-alt}
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+
+
+[settings]
+screenchange-reload = true

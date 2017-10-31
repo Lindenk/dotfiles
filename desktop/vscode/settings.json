@@ -1,8 +1,21 @@
 // Place your settings in this file to overwrite the default settings
 {
-  "update.channel": "none",
-  "window.menuBarVisibility": "toggle",
   "editor.tabSize": 2,
-  "python.linting.enabledWithoutWorkspace": false,
-  "rust.rustLangSrcPath": "/usr/src/rust/src"
+  "window.menuBarVisibility": "toggle",
+  "editor.wordWrap": "on",
+  "files.associations": {
+      "Jenkinsfile": "groovy",
+      "Vagrantfile": "ruby"
+  },
+  "update.channel": "none",
+  "window.zoomLevel": 0,
+  "keyboard.dispatch": "keyCode",
+  "typescript.check.tscVersion": false,
+
+  "workbench.iconTheme": "material-icon-theme",
+
+  "python.linting.enabled": false,
+
+  "rust.rustLangSrcPath": "/usr/src/rust/src",
+  "vsicons.dontShowNewVersionMessage": true
 }
