@@ -1,4 +1,5 @@
 
 # Encrypted files
 common/taskwarrior/taskrc
+common/gpg/sshcontrol
 desktop/gmusicproxy.cfg

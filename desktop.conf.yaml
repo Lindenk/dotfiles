@@ -39,7 +39,7 @@
 # GPG
 - shell:
     - mkdir -p "$HOME/.gnupg"
-    - cp "desktop/gpg/.gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
+    - cat "desktop/gpg/.gnupg/gpg-agent.conf" >> "$HOME/.gnupg/gpg-agent.conf"
     - sed -i "s~\$HOME~$HOME~" "$HOME/.gnupg/gpg-agent.conf"
 - link:
     ~/scripts/pinentry-rofi.sh:

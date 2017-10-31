@@ -14,6 +14,14 @@
     ~/.gitconfig:
         path: common/git/.gitconfig
 
+# Gnupg
+- shell:
+    - mkdir -p "$HOME/.gnupg"
+    - cp "common/gpg/.gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
+- link:
+    ~/.gnupg/sshcontrol:
+        path: common/gpg/sshcontrol
+
 # Less
 - link:
     ~/.lesskey:

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "OK"
-echo "$PINENTRY_USER_DATA" >> /home/lindenk/test.log
+#echo "$PINENTRY_USER_DATA" >> /home/lindenk/test.log
 while read cmd rest; do
     cmd=$(printf "%s" "$cmd" | tr 'A-Z' 'a-z')
     if [ -z "$cmd" ]; then
