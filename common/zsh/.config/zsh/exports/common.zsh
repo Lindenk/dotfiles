@@ -16,6 +16,13 @@ export EDITOR='nano'
 
 # GPG encryption prompt
 export GPG_TTY=`tty`
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
+# GPG agent for ssh
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+fi
 
 # Taskwarrior
 export TASKRC=~/.config/taskwarrior/taskrc
