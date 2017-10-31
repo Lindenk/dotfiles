@@ -1,4 +1,8 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.tabSize": 2
+  "update.channel": "none",
+  "window.menuBarVisibility": "toggle",
+  "editor.tabSize": 2,
+  "python.linting.enabledWithoutWorkspace": false,
+  "rust.rustLangSrcPath": "/usr/src/rust/src"
 }

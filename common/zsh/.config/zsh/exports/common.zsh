@@ -21,7 +21,7 @@ export TASKRC=~/.config/taskwarrior/taskrc
 export TASKDATA=~/.local/share/taskwarrior
 
 # SRC
-export RUST_SRC_PATH='/usr/share/rust/src'
+export RUST_SRC_PATH='/usr/src/rust/src'
 
 # Paths
 export GOPATH=$(echo ~/.go)
