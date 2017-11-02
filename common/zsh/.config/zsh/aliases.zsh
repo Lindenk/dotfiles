@@ -19,4 +19,7 @@ man() {
 }
 
 # vscode
-alias vscode='visual-studio-code'
+alias vscode='code'
+
+# copy to clipboard
+alias clip='xclip -selection clipboard'
