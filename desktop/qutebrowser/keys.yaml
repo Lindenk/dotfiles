@@ -24,6 +24,7 @@ normal:
   X: undo
 
   d: tab-clone
+  <ctrl-d>: tab-clone -w
 
   # Tab nav
   <ctrl-j>: tab-prev
