@@ -45,6 +45,11 @@
     ~/scripts/pinentry-rofi.sh:
         path: desktop/gpg/scripts/pinentry-rofi.sh
 
+# i3
+- link:
+    ~/.config/i3/config:
+        path: desktop/i3/config
+
 # Qutebrowser
 - link:
     ~/.config/qutebrowser/config.py:

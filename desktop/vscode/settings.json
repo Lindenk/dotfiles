@@ -12,7 +12,7 @@
   "keyboard.dispatch": "keyCode",
   "typescript.check.tscVersion": false,
 
-  "workbench.iconTheme": "easy-icons",
+  "workbench.iconTheme": "material-icon-theme",
 
   "python.linting.enabled": false,
 
