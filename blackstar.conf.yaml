@@ -8,3 +8,8 @@
     - 
         command: ./install desktop.conf.yaml
         stdout: true
+
+# i3
+- link:
+    ~/.config/i3/config:
+        path: blackstar/i3/config
