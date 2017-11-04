@@ -1,6 +1,5 @@
 import yaml
 
-print(c.bindings.default)
 c.bindings.default = {}
 
 with (config.configdir / 'keys.yaml').open() as f:

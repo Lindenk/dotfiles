@@ -26,6 +26,8 @@
 - link:
     ~/.lesskey:
         path: common/less/.lesskey
+- shell:
+    - "lesskey"
     
 # Nano
 - link:
