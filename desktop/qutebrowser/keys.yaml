@@ -83,8 +83,8 @@ normal:
   I: scroll-page 0 -0.5
   L: scroll-page 0.2 0
 
-  <ctrl-i>: scroll-prec 0
-  <ctrl-k>: scroll-prec
+  <ctrl-i>: scroll-to-prec 0
+  <ctrl-k>: scroll-to-prec
 
   # Marks
   m: enter-mode jump_mark

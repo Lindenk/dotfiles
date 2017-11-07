@@ -54,7 +54,7 @@
 
 # Todoist
 - link:
-    ~/.todoist.conf.json:
+    ~/.todoist.config.json:
         path: common/todoist/todoist.config.json
 
 # Zsh
