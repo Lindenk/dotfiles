@@ -52,6 +52,11 @@
     ~/.config/taskwarrior/taskrc:
         path: common/taskwarrior/taskrc
 
+# Todoist
+- link:
+    ~/.todoist.conf.json:
+        path: common/todoist/todoist.config.json
+
 # Zsh
 - link: 
     ~/.config/zsh:
