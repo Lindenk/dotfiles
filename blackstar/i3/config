@@ -165,4 +165,5 @@ bar {
 bindsym $mod+Ctrl+space exec qutebrowser
 bindsym $mod+c exec "~/scripts/pass-rofi.sh"
 bindsym $mod+Shift+s exec"~/scripts/rofi_spellcheck.sh"
-
+bindsym $mod+t exec "~/scripts/rofi_todoist_quick.sh"
+bindsym $mod+Shift+t exec "~/scripts/rofi_todoist_close.sh"

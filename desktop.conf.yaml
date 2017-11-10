@@ -19,6 +19,10 @@
         path: desktop/scripts/rofi_gmusic/rofi_select_song.sh
     ~/scripts/pass-rofi.sh:
         path: desktop/gpg/scripts/pass-rofi.sh
+    ~/scripts/rofi_todoist_quick.sh:
+        path: desktop/scripts/rofi_todoist_quick.sh
+    ~/scripts/rofi_todoist_close.sh:
+        path: desktop/scripts/rofi_todoist_close.sh
 
 # Mpd
 - link:
