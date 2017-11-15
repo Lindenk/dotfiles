@@ -10,7 +10,7 @@ for mode, bindings in yaml_data.items():
     config.bind(k, command, mode=mode)
 
 # Start pages
-c.url.start_pages = ["https://gmail.com", "https://fastmail.com", "https://discordapp.com"]
+#c.url.start_pages = ["https://gmail.com", "https://fastmail.com", "https://discordapp.com"]
 
 # Config
 c.scrolling.smooth = True
