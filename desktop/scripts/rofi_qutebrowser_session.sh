@@ -19,12 +19,13 @@ windows:
 # For now...
 XDG_DATA_HOME="$HOME/.local/share/"
 
-SESSIONS=$(find "$XDG_DATA_HOME/qutebrowser/sessions" -type f -printf "%f\n")
+SESSIONS=$(find "$XDG_DATA_HOME/qutebrowser/sessions" -name '*.yml' -type f -printf "%f\n" |
+           sed -r -e 's/\.[^\.]*//' -e '/^$/d' -e '/^_/d')
 
 SESSION=$(rofi -dmenu -p "Session: " <<< "$SESSIONS")
 
 test -z "$SESSION" && exit 1
 
-find "$XDG_DATA_HOMEqutebrowser/sessions/$SESSION" -type f || echo "$NEW_SESSION" > "$XDG_DATA_HOME/qutebrowser/sessions/$SESSION.yml"
+find "$XDG_DATA_HOME/qutebrowser/sessions/$SESSION.yml" -type f || echo "$NEW_SESSION" > "$XDG_DATA_HOME/qutebrowser/sessions/$SESSION.yml"
 
-qutebrowser --target window -r "${SESSION%.*}"
+qutebrowser --target window -r "${SESSION}"
