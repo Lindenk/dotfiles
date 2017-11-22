@@ -28,4 +28,4 @@ test -z "$SESSION" && exit 1
 
 find "$XDG_DATA_HOME/qutebrowser/sessions/$SESSION.yml" -type f || echo "$NEW_SESSION" > "$XDG_DATA_HOME/qutebrowser/sessions/$SESSION.yml"
 
-qutebrowser --target window -r "${SESSION}"
+~/scripts/qutebrowser_session_wrapper.sh --target window -r "${SESSION}"

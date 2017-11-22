@@ -13,6 +13,8 @@
 
 # Scripts
 - link:
+    ~/scripts/qutebrowser_session_wrapper.sh:
+        path: desktop/scripts/qutebrowser_session_wrapper.sh
     ~/scripts/rofi_qutebrowser_session.sh:
         path: desktop/scripts/rofi_qutebrowser_session.sh
     ~/scripts/rofi_spellcheck.sh:
