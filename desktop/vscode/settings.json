@@ -17,5 +17,6 @@
   "python.linting.enabled": false,
 
   "rust.rustLangSrcPath": "/usr/src/rust/src",
-  "vsicons.dontShowNewVersionMessage": true
+  "vsicons.dontShowNewVersionMessage": true,
+  "python.linting.enabledWithoutWorkspace": false
 }
