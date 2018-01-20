@@ -188,7 +188,9 @@ bindsym $mod+c       exec ~/scripts/pass-rofi.sh
 bindsym $mod+Shift+d exec ~/scripts/dmenu_steam
 bindsym $mod+w       exec ~/scripts/wacom_lock_to_current_display.sh
 bindsym $mod+Shift+w exec ~/scripts/wacom_lock_to_full.sh
-bindsym $mod+Control+space exec qutebrowser
+bindsym $mod+Control+space exec ~/scripts/rofi_qutebrowser_session.sh
+bindsym $mod+t       exec ~/scripts/rofi_todoist_quick.sh
+bindsym $mod+Shift+t exec ~/scripts/rofi_todoist_close.sh
 
 # Start stuff
 exec compton -b
