@@ -18,5 +18,6 @@
 
   "rust.rustLangSrcPath": "/usr/src/rust/src",
   "vsicons.dontShowNewVersionMessage": true,
-  "python.linting.enabledWithoutWorkspace": false
+  "python.linting.enabledWithoutWorkspace": false,
+  "material-icon-theme.showUpdateMessage": false
 }
