@@ -19,5 +19,19 @@
   "rust.rustLangSrcPath": "/usr/src/rust/src",
   "vsicons.dontShowNewVersionMessage": true,
   "python.linting.enabledWithoutWorkspace": false,
+
+  "latex-workshop.latex.toolchain": [
+    {
+      "command": "xelatex",
+      "args": [
+        "--synctex",
+        "--pdf",
+        "--tex-option=\"-interaction=nonstopmode\"",
+        "--tex-option=\"-file-line-error\"",
+        "%DOC%.tex"
+      ]
+    }
+  ],
+
   "material-icon-theme.showUpdateMessage": false
 }
