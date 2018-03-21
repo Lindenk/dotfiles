@@ -31,5 +31,6 @@
         "%DOC%.tex"
       ]
     }
-  ]
+  ],
+  "extensions.ignoreRecommendations": false
 }
