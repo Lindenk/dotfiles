@@ -155,9 +155,6 @@ prompt:
   <enter>: prompt-accept
   <shift-enter>: prompt-accept
 
-  y: prompt-accept yes
-  n: prompt-accept no
-
   <shift-tab>: prompt-item-focus prev
   <up>: prompt-item-focus prev
 
@@ -167,3 +164,9 @@ prompt:
   <ctrl-c>: rl-yank
 
   <escape>: leave-mode
+
+yesno:
+  <Escape>: leave-mode
+  <Return>: prompt-accept
+  n: prompt-accept no
+  y: prompt-accept yes
