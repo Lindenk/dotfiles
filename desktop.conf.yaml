@@ -27,6 +27,10 @@
         path: desktop/scripts/rofi_todoist_quick.sh
     ~/scripts/rofi_todoist_close.sh:
         path: desktop/scripts/rofi_todoist_close.sh
+    ~/scripts/rofi_audio_set_default.py:
+        path: desktop/scripts/rofi_audio_set_default.py
+    ~/scripts/rofi_audio_move_sink_input.py:
+        path: desktop/scripts/rofi_audio_move_sink_input.py
 
 # Mpd
 - link:
