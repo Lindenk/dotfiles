@@ -17,7 +17,15 @@ def main():
 
   # Ask user for a sink-input to move
   sink_inputs = pulse.sink_input_list()
-  sink_input_index, _ = rofi.select("Select sink-input to move", ['All'] + [si.proplist['application.name'] + ': ' + si.proplist['media.name'] for si in sink_inputs])
+
+  selections = ['All']
+  for si in sink_inputs:
+    try:
+      selections.append(si.proplist['application.name'] + ': ' + si.proplist['media.name'])
+    except KeyError:
+      selections.append(si.proplist['media.name'])
+
+  sink_input_index, _ = rofi.select("Select sink-input to move", selections)
 
   if sink_input_index == -1: # They hit escape
     return

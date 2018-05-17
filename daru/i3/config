@@ -191,7 +191,7 @@ bindsym $mod+Shift+w exec ~/scripts/wacom_lock_to_full.sh
 bindsym $mod+Control+space exec ~/scripts/rofi_qutebrowser_session.sh
 bindsym $mod+t       exec ~/scripts/rofi_todoist_quick.sh
 bindsym $mod+Shift+t exec ~/scripts/rofi_todoist_close.sh
-bindsym $mod+a       exec ~/scripts/rofi_audio_set_default.py
+bindsym $mod+a       exec ~/scripts/rofi_audio_set_default_sink.py
 bindsym $mod+Shift+a exec ~/scripts/rofi_audio_move_sink_input.py
 
 # Start stuff
