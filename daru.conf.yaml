@@ -26,6 +26,8 @@
 - link:
     ~/.config/polybar/config:
         path: daru/polybar/config
+    ~/scripts/polybar:
+        path: daru/polybar/scripts
 
 # sxhkd
 - link:

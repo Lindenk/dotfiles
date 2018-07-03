@@ -1,0 +1,46 @@
+---
+
+# Movement
+- command: up
+  key: i
+
+- command: down
+  key: k
+
+- command: left
+  key: j
+
+- command: right
+  key: l
+
+- command: word_end
+  key: L
+
+- command: word_back
+  key: J
+
+- command: paragraph_next
+  key: I
+
+- command: paragraph_prev
+  key: K
+
+# Commands
+- command: delete
+  key: d
+
+
+
+# Mode switching
+- command: insert
+  key: e
+
+- command: insert_below
+  key: E
+
+# Other
+- command: command
+  key: ':'
+
+- command: new_tab
+  key: 'n'

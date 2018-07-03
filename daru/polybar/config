@@ -43,7 +43,7 @@ font-1 = FontAwesome:size=10;2
 
 modules-left = i3
 modules-center = 
-modules-right = volume eth wlan date
+modules-right = volume eth wlan battery date
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -165,6 +165,12 @@ ramp-volume-2 = 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
 
+
+; Battery
+[module/battery]
+type = custom/script
+exec = ~/scripts/polybar/ups_battery.py
+interval = 3
 
 [settings]
 screenchange-reload = true

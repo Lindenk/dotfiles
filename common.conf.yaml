@@ -9,6 +9,11 @@
 
 # Bin
 
+
+# Scripts
+- link:
+    ~/scripts/vim_config.py: common/scripts/vim_config.py
+
 # Git
 - link:
     ~/.gitconfig:
