@@ -14,7 +14,7 @@ for mode, bindings in yaml_data.items():
 
 # Config
 c.scrolling.smooth = True
-c.content.developer_extras = True
+#c.content.developer_extras = True
 
 c.downloads.location.directory = "~/downloads"
 #c.downloads.open_dispatcher = "open {}"
