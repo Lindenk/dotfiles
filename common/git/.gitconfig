@@ -14,7 +14,7 @@ cmd = visual-studio-code -n --wait --diff "$REMOTE" "$BASE" "$LOCAL" "$MERGED"
 tool = vscode
 
 [difftool "vscode"]
-cmd = visual-studio-code -n --wait --diff "$REMOTE" "$LOCAL"
+cmd = code -n --wait --diff "$REMOTE" "$LOCAL"
 
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
