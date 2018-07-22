@@ -182,6 +182,10 @@ bindsym $mod+r mode "resize"
 # Window settings
 for_window [class="Godot_Engine"] floating enable
 
+# Volume
+bindsym XF86AudioRaiseVolume exec ponymix increase 4
+bindsym XF86AudioLowerVolume exec ponymix decrease 4
+
 # Other commands
 bindsym $mod+Shift+s exec ~/scripts/rofi_spellcheck.sh
 bindsym $mod+c       exec ~/scripts/pass-rofi.sh
