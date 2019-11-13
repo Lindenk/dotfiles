@@ -68,6 +68,8 @@
 - link:
     ~/.config/Code/User/settings.json:
         path: desktop/vscode/settings.json
+    ~/.config/VSCodium/User/settings.json:
+        path: desktop/vscode/settings.json
 - shell:
     - ["which code && cat desktop/vscode/extensions | DISPLAY=:-1 xargs -L 1 code --install-extension",
     "Installing VSCode Extensions"]

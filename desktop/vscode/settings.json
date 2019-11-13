@@ -34,5 +34,30 @@
   ],
 
   "material-icon-theme.showUpdateMessage": false,
-  "extensions.ignoreRecommendations": false
+  "extensions.ignoreRecommendations": false,
+  "explorer.confirmDragAndDrop": false,
+  "vsicons.projectDetection.autoReload": true,
+  "terminal.integrated.rendererType": "dom",
+  "update.enableWindowsBackgroundUpdates": false,
+  "window.restoreWindows": "none",
+  "liveshare.featureSet": "insiders",
+  "files.eol": "\n",
+  "cwtools.cache.stellaris": "/home/lindenk/.steam/steam/steamapps/common/Stellaris",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "python.jediEnabled": false,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "workbench.colorTheme": "Complete Dark",
+  "rust.mode": "rls",
+  "rust.rustup": {
+    "nightlyToolchain": "nightly-x86_64-unknown-linux-gnu"
+  },
+  "rust.rls": {
+    "useRustfmt": true
+  }
 }

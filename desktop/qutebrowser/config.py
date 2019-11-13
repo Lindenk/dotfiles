@@ -24,3 +24,5 @@ c.editor.command = ["code", "-n", "{}"]
 c.hints.chars = "asdfghjkl;"
 
 c.auto_save.session =  True
+c.content.cookies.accept = 'all'
+c.input.insert_mode.leave_on_load = False

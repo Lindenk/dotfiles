@@ -4,10 +4,10 @@
 	signingkey = 9D435BF127293F4A
 
 [merge]
-	tool = meld
+	tool = vscode
 
 [mergetool "vscode"]
-cmd = visual-studio-code -n --wait --diff "$REMOTE" "$BASE" "$LOCAL" "$MERGED"
+cmd = code -n --wait --diff "$REMOTE" "$BASE" "$LOCAL" "$MERGED"
 #trustExitCode = false
 
 [diff]

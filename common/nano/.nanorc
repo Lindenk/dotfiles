@@ -49,7 +49,7 @@ set autoindent
 # set const
 
 ## Use cut-to-end-of-line by default.
-set cut
+#set cut - no longer works?
 
 ## Set the line length for wrapping text and justifying paragraphs.
 ## If the value is 0 or less, the wrapping point will be the screen
