@@ -7,42 +7,23 @@
       "Jenkinsfile": "groovy",
       "Vagrantfile": "ruby"
   },
-  "update.channel": "none",
+  "update.mode": "none",
   "window.zoomLevel": 0,
   "keyboard.dispatch": "keyCode",
-  "typescript.check.tscVersion": false,
 
   "workbench.iconTheme": "material-icon-theme",
 
   "python.linting.enabled": false,
 
   "rust.rustLangSrcPath": "/usr/src/rust/src",
-  "vsicons.dontShowNewVersionMessage": true,
-  "python.linting.enabledWithoutWorkspace": false,
-
-  "latex-workshop.latex.toolchain": [
-    {
-      "command": "xelatex",
-      "args": [
-        "--synctex",
-        "--pdf",
-        "--tex-option=\"-interaction=nonstopmode\"",
-        "--tex-option=\"-file-line-error\"",
-        "%DOC%.tex"
-      ]
-    }
-  ],
 
   "material-icon-theme.showUpdateMessage": false,
   "extensions.ignoreRecommendations": false,
   "explorer.confirmDragAndDrop": false,
-  "vsicons.projectDetection.autoReload": true,
   "terminal.integrated.rendererType": "dom",
-  "update.enableWindowsBackgroundUpdates": false,
   "window.restoreWindows": "none",
   "liveshare.featureSet": "insiders",
   "files.eol": "\n",
-  "cwtools.cache.stellaris": "/home/lindenk/.steam/steam/steamapps/common/Stellaris",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "python.jediEnabled": false,
@@ -54,10 +35,12 @@
   },
   "workbench.colorTheme": "Complete Dark",
   "rust.mode": "rls",
-  "rust.rustup": {
-    "nightlyToolchain": "nightly-x86_64-unknown-linux-gnu"
-  },
   "rust.rls": {
-    "useRustfmt": true
+    "useRustfmt": true,
+  },
+  "julia.enableTelemetry": true,
+  "julia.enableCrashReporter": true,
+  "rust.rustup": {
+    "toolchain": "stable-x86_64-unknown-linux-gnu"
   }
 }

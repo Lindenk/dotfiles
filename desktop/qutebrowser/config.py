@@ -26,3 +26,7 @@ c.hints.chars = "asdfghjkl;"
 c.auto_save.session =  True
 c.content.cookies.accept = 'all'
 c.input.insert_mode.leave_on_load = False
+
+#with config.pattern("*://app.roll20.net/editor/*") as p:
+#  p.input.insert_mode.auto_leave = False
+c.input.insert_mode.auto_leave = False

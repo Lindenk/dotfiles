@@ -32,7 +32,7 @@ new_window pixel 1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Shift+space exec i3-sensible-terminal
+bindsym $mod+Shift+space exec alacritty #i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -201,6 +201,9 @@ bindsym $mod+t       exec ~/scripts/rofi_todoist_quick.sh
 bindsym $mod+Shift+t exec ~/scripts/rofi_todoist_close.sh
 bindsym $mod+a       exec ~/scripts/rofi_audio_set_default_sink.py
 bindsym $mod+Shift+a exec ~/scripts/rofi_audio_move_sink_input.py
+#bindsym $mod+Control+v exec ~/scripts/send_clipboard_to_window.sh
+bindsym --release $mod+Control+c exec ~/scripts/screenshot_to_clipboard.sh
+bindsym $mod+Control+m xdotool click --delay .05 --repeat 1000 1
 
 # Start stuff
 exec compton -b

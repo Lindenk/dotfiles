@@ -46,3 +46,4 @@ export XDG_DATA_HOME="$HOME/.local/share/"
 
 # Other
 DATA_DIR="$HOME/.local/share"
+#fpath=(~/.config/zsh/completions $fpath)
