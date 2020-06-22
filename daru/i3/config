@@ -206,6 +206,6 @@ bindsym --release $mod+Control+c exec ~/scripts/screenshot_to_clipboard.sh
 bindsym $mod+Control+m xdotool click --delay .05 --repeat 1000 1
 
 # Start stuff
-exec compton -b
-exec steam -silent
+exec --no-startup-id compton -b
+exec --no-startup-id steam -silent
 exec_always --no-startup-id $HOME/scripts/polybar_launch.sh
