@@ -8,3 +8,8 @@ done
 _new_path+="$HOME/.config/zsh/completions"
 
 path=($path ${_new_path:|path})
+
+# Japanese input
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export GTK_IM_MODULE=fcitx

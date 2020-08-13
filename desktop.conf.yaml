@@ -96,3 +96,8 @@
 - shell:
     - [cat desktop/rofi/.Xresources >> $HOME/.config/X/.Xresources,
         Adding rofi to .Xresources]
+
+# Compositor
+- link:
+    ~/.config/picom/picom.conf:
+      path: desktop/picom/picom.conf

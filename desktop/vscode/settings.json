@@ -8,6 +8,7 @@
       "Vagrantfile": "ruby"
   },
   "update.mode": "none",
+  "extensions.autoUpdate": false,
   "window.zoomLevel": 0,
   "keyboard.dispatch": "keyCode",
 
@@ -42,5 +43,8 @@
   "julia.enableCrashReporter": true,
   "rust.rustup": {
     "toolchain": "stable-x86_64-unknown-linux-gnu"
-  }
+  },
+  "go.formatTool": "goimports",
+  
+  "coq.showProofViewOn": "open-script"
 }

@@ -15,7 +15,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:monospace 8
 
-new_window pixel 1
+default_border pixel 1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -27,6 +27,9 @@ new_window pixel 1
 # clear in small sizes. However, its unicode glyph coverage is limited, the old
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
+
+# Toggle window title
+bindsym $mod+Shift+u border toggle
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -206,6 +209,7 @@ bindsym --release $mod+Control+c exec ~/scripts/screenshot_to_clipboard.sh
 bindsym $mod+Control+m xdotool click --delay .05 --repeat 1000 1
 
 # Start stuff
-exec --no-startup-id compton -b
+exec --no-startup-id picom -b
 exec --no-startup-id steam -silent
 exec_always --no-startup-id $HOME/scripts/polybar_launch.sh
+exec --no-startup-id fcitx -d
