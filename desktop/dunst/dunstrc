@@ -1,5 +1,5 @@
 [global]
-    font = "Droid Sans 8"
+    font = "Monospace"
     allow_markup = yes
     format = "<b>%s</b>\n%b"
     sort = yes
@@ -27,11 +27,11 @@
     color = "#464B50"
 
 # mod1 = alt, mod4 = meta
-[shortcuts]
-    close = mod1+mod4+space
-    close_all = mod1+mod4+ctrl+space
-    history = mod4+grave
-    context = mod1+mod4+grave
+#[shortcuts]
+#    close = mod4+Escape
+#    close_all = mod4+ctrl+escape
+#    history = mod4+up
+#    context = mod4+right
 
 [urgency_low]
     background = "#323537"

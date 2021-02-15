@@ -9,4 +9,4 @@ done
 source $HOME/scripts/zsh-syntax-highlighting.zsh
 
 if which thefuck >> /dev/null; then eval $(thefuck --alias); fi
-if which opam >> /dev/null; then eval $(opam env); fi
+test -r /home/lindenk/.opam/opam-init/init.zsh && . /home/lindenk/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

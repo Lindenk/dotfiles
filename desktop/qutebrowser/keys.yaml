@@ -69,7 +69,7 @@ normal:
   D: hint all download
   <ctrl-d>: download-remove -a
 
-  e: enter-mode insert
+  e: mode-enter insert
   E: hint inputs
 
   # Scrolling
@@ -87,8 +87,8 @@ normal:
   <ctrl-k>: scroll-to-perc
 
   # Marks
-  m: enter-mode jump_mark
-  M: enter-mode set_mark
+  m: mode-enter jump_mark
+  M: mode-enter set_mark
 
   # Zoom
   Z: zoom-out
@@ -117,7 +117,7 @@ normal:
 
 insert:
   <ctrl-e>: open-editor
-  <escape>: leave-mode
+  <escape>: mode-leave
 
 hint:
   <return>: follow-hint
@@ -125,7 +125,7 @@ hint:
   <enter>: follow-hint
   <shift-enter>: follow-hint
 
-  <escape>: leave-mode
+  <escape>: mode-leave
 
 command:
   <ctrl-i>: command-history-prev
@@ -147,7 +147,7 @@ command:
 
   <ctrl-c>: rl-yank
 
-  <escape>: leave-mode
+  <escape>: mode-leave
 
 prompt:
   <return>: prompt-accept
@@ -163,10 +163,10 @@ prompt:
 
   <ctrl-c>: rl-yank
 
-  <escape>: leave-mode
+  <escape>: mode-leave
 
 yesno:
-  <Escape>: leave-mode
+  <Escape>: mode-leave
   <Return>: prompt-accept
   n: prompt-accept no
   y: prompt-accept yes

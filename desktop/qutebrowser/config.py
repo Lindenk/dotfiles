@@ -1,6 +1,7 @@
 import yaml
 
 c.bindings.default = {}
+config.load_autoconfig(False)
 
 with (config.configdir / 'keys.yaml').open() as f:
   yaml_data = yaml.load(f)
@@ -30,3 +31,6 @@ c.input.insert_mode.leave_on_load = False
 #with config.pattern("*://app.roll20.net/editor/*") as p:
 #  p.input.insert_mode.auto_leave = False
 c.input.insert_mode.auto_leave = False
+
+# Colors
+#c.colors.statusbar.normal.bg = "#00000080"

@@ -1,7 +1,7 @@
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
-background-alt = #444
+background = #b0222222
+background-alt = #b0bbbbbb
 ;foreground = ${xrdb:color7:#222}
 foreground = #CCCCFF
 foreground-alt = #555
@@ -32,8 +32,8 @@ fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-border-size = 2
-border-color = #00000000
+;border-size = 0
+;border-color = #00000000
 
 module-margin = 1
 padding-right = 2
@@ -67,12 +67,12 @@ label-active-font = 1
 label-mode-padding = 4
 
 label-focused = %index%
-label-focused-foreground = #CCCCFF
-label-focused-background = #444
+label-focused-foreground = #DDDDFF
+label-focused-background = #40ffffff
 label-focused-padding = 1
 
 label-unfocused = %index%
-label-unfocused-foreground = #555555
+label-unfocused-foreground = #bbbbbb
 label-unfocused-padding = 1
 
 label-visible = %index%

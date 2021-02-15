@@ -31,6 +31,10 @@
         path: desktop/scripts/rofi_audio_set_default_sink.py
     ~/scripts/rofi_audio_move_sink_input.py:
         path: desktop/scripts/rofi_audio_move_sink_input.py
+    ~/scripts/rofi_audio_create_loopback.py:
+        path: desktop/scripts/rofi_audio_create_loopback.py
+    ~/scripts/rofi_audio_create_virtual_sink.py:
+        path: desktop/scripts/rofi_audio_create_virtual_sink.py
 
 # Mpd
 - link:

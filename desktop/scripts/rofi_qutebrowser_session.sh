@@ -26,6 +26,7 @@ SESSION=$(rofi -dmenu -p "Session: " <<< "$SESSIONS")
 
 test -z "$SESSION" && exit 1
 
-find "$XDG_DATA_HOME/qutebrowser/sessions/$SESSION.yml" -type f || echo "$NEW_SESSION" > "$XDG_DATA_HOME/qutebrowser/sessions/$SESSION.yml"
+# Just quit if we don't find it -- TODO: Write a seperate script for making new sessions
+find "$XDG_DATA_HOME/qutebrowser/sessions/$SESSION.yml" -type f || exit 2 #|| echo "$NEW_SESSION" > "$XDG_DATA_HOME/qutebrowser/sessions/$SESSION.yml"
 
 ~/scripts/qutebrowser_session_wrapper.sh --target window -r "${SESSION}"

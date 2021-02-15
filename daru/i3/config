@@ -53,12 +53,6 @@ bindsym $mod+k focus down
 bindsym $mod+i focus up
 bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
@@ -180,6 +174,9 @@ bindsym $mod+r mode "resize"
 for_window [class="Godot"] floating enable
 for_window [title=".*Godot Engine*."] floating disable
 
+# Absolute hack to deal with microsoft's inability to listen to their community
+for_window [title="uishagoob1re3maph3maeshiVohl7Ahf"] move scratchpad
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 #bar {
@@ -192,6 +189,13 @@ for_window [class="Godot_Engine"] floating enable
 # Volume
 bindsym XF86AudioRaiseVolume exec ponymix increase 4
 bindsym XF86AudioLowerVolume exec ponymix decrease 4
+
+# Notifications
+bindsym $mod+Escape exec dunstctl close
+bindsym $mod+Shift+Escape exec dunstctl close-all
+bindsym $mod+Control+Shift+Escape exec dunstctl set-paused toggle
+bindsym $mod+Up exec dunstctl history-pop
+bindsym $mod+Menu exec dunstctl context
 
 # Other commands
 bindsym $mod+Shift+s exec ~/scripts/rofi_spellcheck.sh
@@ -210,6 +214,8 @@ bindsym $mod+Control+m xdotool click --delay .05 --repeat 1000 1
 
 # Start stuff
 exec --no-startup-id picom -b
+exec --no-startup-id dunst &
+exec --no-startup-id code -n uishagoob1re3maph3maeshiVohl7Ahf
 exec --no-startup-id steam -silent
 exec_always --no-startup-id $HOME/scripts/polybar_launch.sh
 exec --no-startup-id fcitx -d
