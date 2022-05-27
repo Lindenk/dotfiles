@@ -171,8 +171,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Classes
-for_window [class="Godot"] floating enable
-for_window [title=".*Godot Engine*."] floating disable
+#for_window [class="Godot"] floating enable
+#for_window [title=".*Godot Engine*."] floating disable
 
 # Absolute hack to deal with microsoft's inability to listen to their community
 for_window [title="uishagoob1re3maph3maeshiVohl7Ahf"] move scratchpad
@@ -212,6 +212,9 @@ bindsym $mod+Shift+a exec ~/scripts/rofi_audio_move_sink_input.py
 bindsym --release $mod+Control+c exec ~/scripts/screenshot_to_clipboard.sh
 bindsym $mod+Control+m xdotool click --delay .05 --repeat 1000 1
 
+# alt binds
+bindcode 105 exec xdotool click 1
+
 # Start stuff
 exec --no-startup-id picom -b
 exec --no-startup-id dunst &
@@ -219,3 +222,4 @@ exec --no-startup-id code -n uishagoob1re3maph3maeshiVohl7Ahf
 exec --no-startup-id steam -silent
 exec_always --no-startup-id $HOME/scripts/polybar_launch.sh
 exec --no-startup-id fcitx -d
+

@@ -52,6 +52,11 @@
     ~/.config/ranger/rc.conf:
         path: common/ranger/rc.conf
 
+# Helix
+- link:
+    ~/.config/helix/config.toml:
+        path: common/helix/config.toml
+
 # Taskwarrior
 - link:
     ~/.config/taskwarrior/taskrc:

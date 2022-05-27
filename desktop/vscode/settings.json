@@ -4,26 +4,19 @@
   "window.menuBarVisibility": "toggle",
   "editor.wordWrap": "on",
   "files.associations": {
-      "Jenkinsfile": "groovy",
-      "Vagrantfile": "ruby"
+    "Jenkinsfile": "groovy",
+    "Vagrantfile": "ruby"
   },
   "update.mode": "none",
   "extensions.autoUpdate": false,
-  "window.zoomLevel": 0,
-  "keyboard.dispatch": "keyCode",
-
   "workbench.iconTheme": "material-icon-theme",
-
   "python.linting.enabled": false,
-
   "rust.rustLangSrcPath": "/usr/src/rust/src",
-
   "material-icon-theme.showUpdateMessage": false,
   "extensions.ignoreRecommendations": false,
   "explorer.confirmDragAndDrop": false,
   "terminal.integrated.rendererType": "dom",
   "window.restoreWindows": "none",
-  "liveshare.featureSet": "insiders",
   "files.eol": "\n",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -35,17 +28,93 @@
     "**/.factorypath": true
   },
   "workbench.colorTheme": "Complete Dark",
-  "rust.mode": "rls",
-  "rust.rls": {
-    "useRustfmt": true,
-  },
   "julia.enableTelemetry": true,
   "julia.enableCrashReporter": true,
   "rust.rustup": {
     "toolchain": "stable-x86_64-unknown-linux-gnu"
   },
   "go.formatTool": "goimports",
-  
-"coq.showProofViewOn": "open-script",
-"python.languageServer": "Microsoft"
+  "coq.showProofViewOn": "open-script",
+  "python.languageServer": "Default",
+  "rust-analyzer.cargo.allFeatures": true,
+  "rust-analyzer.lens.methodReferences": true,
+  "rust-analyzer.lens.references": true,
+  "rust-analyzer.procMacro.enable": true,
+  "keyboard.dispatch": "keyCode",
+  "redhat.telemetry.enabled": true,
+  "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
+  "julia.symbolCacheDownload": true,
+  "workbench.editor.untitled.hint": "hidden",
+  "security.workspace.trust.enabled": false,
+  "godot_tools.editor_path": "/usr/bin/godot-mono",
+  "godot.csharp.executablePath": "/usr/bin/godot-mono",
+  "liveshare.accessibility.voiceEnabled": false,
+
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "vetur.format.defaultFormatter.html": "prettyhtml",
+  "vetur.format.defaultFormatter.js": "prettier-eslint",
+  "attrsSorter.order": [
+    "is",
+    "v-for",
+    "v-if",
+    "v-else-if",
+    "v-else",
+    "v-show",
+    "v-cloak",
+    "v-once",
+    "v-pre",
+    "id",
+    "ref",
+    "key",
+    "v-slot",
+    "v-slot.+",
+    "#.*",
+    "slot",
+    "v-model",
+    "v-model.+",
+    "v-bind",
+    "v-bind.+",
+    ":.+",
+    "v-text",
+    "v-text.+",
+    "v-html",
+    "v-html.+",
+    "class",
+    "v-on.+",
+    "@.+",
+    "name",
+    "data-.+",
+    "ng-.+",
+    "src",
+    "for",
+    "type",
+    "href",
+    "values",
+    "title",
+    "alt",
+    "role",
+    "aria-.+",
+    "$unknown$"
+  ],
+  "todohighlight.isEnable": true,
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.php",
+    "**/*.css",
+    "**/*.sass",
+    "**/*.scss",
+    "**/*.vue"
+  ],
+  "[rust]": {
+    "editor.defaultFormatter": "matklad.rust-analyzer"
+  }
 }

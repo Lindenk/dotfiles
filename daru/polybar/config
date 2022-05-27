@@ -21,7 +21,8 @@ monitor = DisplayPort-1
 
 [bar/right]
 inherit = section/main
-monitor = DisplayPort-2
+;monitor = DisplayPort-2
+monitor = HDMI-A-0
 
 [section/main]
 width = 100%
@@ -45,8 +46,8 @@ modules-left = i3
 modules-center = 
 modules-right = volume eth wlan battery date
 
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
+scroll-up = "#i3.prev"
+scroll-down = "#i3.next"
 
 bottom = false
 

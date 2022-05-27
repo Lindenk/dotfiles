@@ -1,6 +1,6 @@
 # ls
 alias ls='_ls_or_exa'
-alias la='ls -al'
+alias la='ls -alg'
 alias sl='ls'
 
 # grep
@@ -23,3 +23,6 @@ alias vscode='code'
 
 # copy to clipboard
 alias clip='xclip -selection clipboard'
+
+# open
+alias open='handlr open'

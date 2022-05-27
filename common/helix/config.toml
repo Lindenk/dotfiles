@@ -1,0 +1,201 @@
+theme = "dark_plus"
+
+[keys.normal]
+
+## Movement ##
+i = "move_line_up"
+k = "move_line_down"
+j = "move_char_left"
+l = "move_char_right"
+
+L = "move_next_word_start"
+C-l = "move_next_long_word_start"
+J = "move_prev_word_start"
+C-j = "move_prev_long_word_start"
+
+A-l = "goto_line_end"
+A-j = "goto_line_start"
+
+I = "half_page_up"
+C-I = "page_up"
+K = "half_page_down"
+C-K = "page_down"
+
+# Goto
+# see below at [keys.normal.y]
+# goto lines
+y.y = "goto_file_start"
+y.J = "goto_file_start"
+y.L = "goto_last_line"
+
+y.j = "goto_line_start"
+y.l = "goto_line_end"
+y.i = "goto_window_top"
+y.k = "goto_window_bottom"
+y.semicolon = "goto_window_center"
+
+# find next
+y.h = "goto_first_nonwhitespace"
+
+# goto related
+y.d = "goto_definition"
+y.D = "goto_type_definition"
+y.s = "goto_reference"
+y.S = "goto_implementation"
+
+# goto other
+y.f = "goto_file"
+y.b = "buffer_picker"
+
+Y = "goto_line"
+
+# Move to next character
+f = "find_next_char"
+F = "find_prev_char"
+C-f = "find_till_char"
+C-F = "till_prev_char"
+"A-." = "repeat_last_motion"
+
+# Move to next arg
+"lt" = "select_prev_sibling"
+"gt" = "select_next_sibling"
+
+# Buffer switching
+o = "rotate_view"
+O = "goto_next_buffer"
+u = "buffer_picker"
+U = "goto_previous_buffer"
+C-u = "file_picker"
+
+p = "vsplit"
+P = "hsplit"
+C-p = ":vsplit-new"
+C-P = ":hsplit-new"
+
+n = ":new"
+
+t = ":bclose"
+T = "wclose"
+C-t = ":bco"
+C-T = "wonly"
+
+# Search
+semicolon = "search"
+C-semicolon = "search_selection"
+A-semicolon = "rsearch"
+'.' = "search_next"
+',' = "search_prev"
+"/" = "global_search"
+"?" = "command_palette"
+
+# Cursors
+m = "copy_selection_on_next_line"
+M = "copy_selection_on_prev_line"
+C-m = "split_selection_on_newline"
+C-M = "split_selection"
+
+
+## Actions ##
+
+# Insertion
+a = "insert_mode"
+A = "append_mode"
+C-a = "append_to_line"
+C-A = "prepend_to_line"
+
+q = "open_below"
+Q = "open_above"
+
+# Selection
+s = "extend_line"
+C-S = "select_all"
+
+esc = ["collapse_selection", "keep_primary_selection"]
+#"S-esc" = "keep_primary_selection"
+
+w = "select_mode"
+W = "select_regex"
+
+# Deletion
+x = "delete_selection_noyank"
+X = "change_selection_noyank"
+C-x = "delete_selection"
+C-X = "change_selection"
+
+# Add symbols
+r = "surround_add"
+R = "surround_delete"
+C-r = "surround_replace"
+
+e = "indent"
+E = "unindent"
+C-e = "toggle_comments"
+
+# Undo/Redo
+z = "undo"
+Z = "redo"
+
+# Copy/Paste (c and v)
+c = "yank"
+C = "select_register"
+v = "paste_before"
+V = "paste_after"
+
+
+## Get information 
+
+# Docs for item under cursor
+space = "hover"
+
+
+## Misc ##
+":" = "command_mode"
+C-s = ":w" # Save
+
+g = "symbol_picker"
+G = "workspace_symbol_picker"
+C-g = "rename_symbol"
+C-G = "code_action"
+
+
+## Unmap these
+d = "no_op"
+D = "no_op"
+h = "no_op"
+H = "no_op"
+b = "no_op"
+B = "no_op"
+N = "no_op"
+
+[keys.select]
+
+# Basic selection
+i = "extend_line_up"
+k = "extend_line_down"
+j = "extend_char_left"
+l = "extend_char_right"
+
+L = "extend_next_word_start"
+C-l = "extend_next_long_word_start"
+J = "extend_prev_word_start"
+C-j = "extend_prev_long_word_start"
+
+A-l = "goto_line_end"
+A-j = "goto_line_start"
+
+C-I = "page_up"
+C-K = "page_down"
+
+# Goto
+Y = "goto_line"
+
+# Move to next character
+f = "find_next_char"
+F = "find_prev_char"
+C-f = "find_till_char"
+C-F = "till_prev_char"
+"A-." = "repeat_last_motion"
+
+# Cursors
+L = "copy_selection_on_next_line"
+I = "copy_selection_on_prev_line"
