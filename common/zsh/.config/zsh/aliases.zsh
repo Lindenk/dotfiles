@@ -1,5 +1,6 @@
 # ls
-alias ls='_ls_or_exa'
+#alias ls='_ls_or_exa'
+alias ls='exa'
 alias la='ls -alg'
 alias sl='ls'
 
