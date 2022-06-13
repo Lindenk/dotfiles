@@ -57,6 +57,10 @@
     ~/.config/helix/config.toml:
         path: common/helix/config.toml
 
+- link:
+    ~/.config/zellij:
+        path: common/zellij
+        
 # Taskwarrior
 - link:
     ~/.config/taskwarrior/taskrc:
