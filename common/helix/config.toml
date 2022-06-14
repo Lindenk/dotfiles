@@ -1,4 +1,7 @@
 theme = "dark_plus"
+unbind_defaults = true
+
+[editor]
 
 [keys.normal]
 
@@ -8,18 +11,18 @@ k = "move_line_down"
 j = "move_char_left"
 l = "move_char_right"
 
-L = "move_next_word_start"
-C-l = "move_next_long_word_start"
-J = "move_prev_word_start"
-C-j = "move_prev_long_word_start"
+L = "extend_next_word_start"
+C-l = "extend_next_long_word_start"
+J = "extend_prev_word_start"
+C-j = "extend_prev_long_word_start"
 
 A-l = "goto_line_end"
 A-j = "goto_line_start"
 
 I = "half_page_up"
-C-I = "page_up"
+C-i = "goto_file_start"
 K = "half_page_down"
-C-K = "page_down"
+C-k = "goto_file_end"
 
 # Goto
 # see below at [keys.normal.y]
@@ -32,7 +35,7 @@ y.j = "goto_line_start"
 y.l = "goto_line_end"
 y.i = "goto_window_top"
 y.k = "goto_window_bottom"
-y.semicolon = "goto_window_center"
+#y.semicolon = "goto_window_center"
 
 # find next
 y.h = "goto_first_nonwhitespace"
@@ -57,8 +60,8 @@ C-F = "till_prev_char"
 "A-." = "repeat_last_motion"
 
 # Move to next arg
-"lt" = "select_prev_sibling"
-"gt" = "select_next_sibling"
+#"lt" = "select_prev_sibling"
+#"gt" = "select_next_sibling"
 
 # Buffer switching
 o = "rotate_view"
@@ -80,20 +83,17 @@ C-t = ":bco"
 C-T = "wonly"
 
 # Search
-semicolon = "search"
-C-semicolon = "search_selection"
-A-semicolon = "rsearch"
+#semicolon = "search"
+#C-semicolon = "search_selection"
+#A-semicolon = "rsearch"
 '.' = "search_next"
 ',' = "search_prev"
 "/" = "global_search"
 "?" = "command_palette"
 
 # Cursors
-m = "copy_selection_on_next_line"
-M = "copy_selection_on_prev_line"
-C-m = "split_selection_on_newline"
-C-M = "split_selection"
-
+A-k = "copy_selection_on_next_line"
+A-i = "copy_selection_on_prev_line"
 
 ## Actions ##
 
@@ -147,7 +147,6 @@ V = "paste_after"
 # Docs for item under cursor
 space = "hover"
 
-
 ## Misc ##
 ":" = "command_mode"
 C-s = ":w" # Save
@@ -155,19 +154,25 @@ C-s = ":w" # Save
 g = "symbol_picker"
 G = "workspace_symbol_picker"
 C-g = "rename_symbol"
-C-G = "code_action"
+
+# C-G doesn't work
+C-space = "code_action"
 
 
 ## Unmap these
-d = "no_op"
-D = "no_op"
+#d = "no_op"
+#D = "no_op"
 h = "no_op"
 H = "no_op"
 b = "no_op"
 B = "no_op"
 N = "no_op"
+#N = "meatballs"
+
 
 [keys.select]
+# exit
+esc = "normal_mode"
 
 # Basic selection
 i = "extend_line_up"

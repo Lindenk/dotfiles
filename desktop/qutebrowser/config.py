@@ -40,5 +40,6 @@ config.set('content.media.audio_capture', True, '*://messages.google.com')
 
 config.set('content.register_protocol_handler', True, '*://mail.google.com')
 
+config.set('editor.command', ['alacritty', '-e', 'helix', '{}'])
 # Colors
 #c.colors.statusbar.normal.bg = "#00000080"

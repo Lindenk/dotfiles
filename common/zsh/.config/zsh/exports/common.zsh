@@ -2,7 +2,7 @@
 export CACA_GEOMETRY=250x66
 
 # Setup terminal, and turn on colors
-export TERM=xterm-256color
+export TERM=alacritty
 export CLICOLOR=1
 
 # Enable color in grep
@@ -12,7 +12,7 @@ export CLICOLOR=1
 # Editor
 export LESS='--ignore-case --raw-control-chars'
 export PAGER='less'
-export EDITOR='nano'
+export EDITOR='helix'
 
 # GPG encryption prompt
 export GPG_TTY=`tty`

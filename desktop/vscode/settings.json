@@ -101,7 +101,7 @@
     "aria-.+",
     "$unknown$"
   ],
-  "todohighlight.isEnable": true,
+  "todohighlight.isEnable": false,
   "todohighlight.include": [
     "**/*.js",
     "**/*.jsx",

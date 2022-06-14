@@ -211,6 +211,7 @@ bindsym $mod+Shift+a exec ~/scripts/rofi_audio_move_sink_input.py
 #bindsym $mod+Control+v exec ~/scripts/send_clipboard_to_window.sh
 bindsym --release $mod+Control+c exec ~/scripts/screenshot_to_clipboard.sh
 bindsym $mod+Control+m xdotool click --delay .05 --repeat 1000 1
+bindsym $mod+e exec xdotool click --delay 50 --repeat 30 1
 
 # alt binds
 bindcode 105 exec xdotool click 1
