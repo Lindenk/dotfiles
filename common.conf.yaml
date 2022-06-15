@@ -71,6 +71,11 @@
     ~/.todoist.config.json:
         path: common/todoist/todoist.config.json
 
+# Starship
+- link:
+    ~/.config/starship.toml:
+       path: common/starship/starship.toml
+
 # Zsh
 - link: 
     ~/.config/zsh:

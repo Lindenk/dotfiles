@@ -1,0 +1,8 @@
+[username]
+style_user = "bold green"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = true
+format = "[$ssh_symbol](bold red)[$hostname](bold blue) "
+ssh_symbol = "@"
