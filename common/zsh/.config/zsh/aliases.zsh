@@ -27,3 +27,6 @@ alias clip='xclip -selection clipboard'
 
 # open
 alias open='handlr open'
+
+# top
+alias btop='bashtop'
