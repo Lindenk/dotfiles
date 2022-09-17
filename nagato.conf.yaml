@@ -1,10 +1,9 @@
 - defaults:
     link:
-        create: true
-        relink: true
+      create: true
+      relink: true
 
- # include common config
+  # include common config
 - shell:
-    - 
-        command: ./install server.conf.yaml
-        stdout: true
+    - command: ./install server.conf.yaml
+      stdout: true

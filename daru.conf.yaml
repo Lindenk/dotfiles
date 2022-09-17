@@ -1,40 +1,38 @@
 - defaults:
     link:
-        create: true
-        relink: true
+      create: true
+      relink: true
 
- # include common config
+  # include common config
 - shell:
-    - 
-        command: ./install desktop.conf.yaml
-        stdout: true
-
+    - command: ./install desktop.conf.yaml
+      stdout: true
 
 # bspwm
 - link:
     ~/.config/bspwm:
-        path: daru/bspwm/config
+      path: daru/bspwm/config
     ~/scripts/bspwm:
-        path: daru/bspwm/scripts
+      path: daru/bspwm/scripts
 
 # i3
 - link:
     ~/.config/i3/config:
-        path: daru/i3/config
+      path: daru/i3/config
 
 # polybar
 - link:
     ~/.config/polybar/config:
-        path: daru/polybar/config
+      path: daru/polybar/config
     ~/scripts/polybar:
-        path: daru/polybar/scripts
+      path: daru/polybar/scripts
 
 # sxhkd
 - link:
     ~/.config/sxhkd:
-        path: daru/sxhkd/config
+      path: daru/sxhkd/config
 
 # yabar
 - link:
     ~/.config/yabar:
-        path: daru/yabar
+      path: daru/yabar

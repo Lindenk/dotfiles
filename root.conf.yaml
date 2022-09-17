@@ -1,10 +1,9 @@
 - defaults:
     link:
-        create: true
-        relink: true
+      create: true
+      relink: true
 
 # Link to system configs
-
 
 # Xsession to run startx from lightdm
 - link:

@@ -1,13 +1,12 @@
 - defaults:
     link:
-        create: true
-        relink: true
+      create: true
+      relink: true
 
- # include common config
+  # include common config
 - shell:
-    - 
-        command: ./install common.conf.yaml
-        stdout: true
+    - command: ./install common.conf.yaml
+      stdout: true
 
 # GPG
 - shell:

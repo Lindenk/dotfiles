@@ -2,55 +2,53 @@
 
 - defaults:
     link:
-        create: true
-        relink: true
+      create: true
+      relink: true
 
 # include common config
 - shell:
-    - 
-        command: ./install common.conf.yaml
-        stdout: true
+    - command: ./install common.conf.yaml
+      stdout: true
 
 # Scripts
 - link:
     ~/scripts/qutebrowser_session_wrapper.sh:
-        path: desktop/scripts/qutebrowser_session_wrapper.sh
+      path: desktop/scripts/qutebrowser_session_wrapper.sh
     ~/scripts/rofi_qutebrowser_session.sh:
-        path: desktop/scripts/rofi_qutebrowser_session.sh
+      path: desktop/scripts/rofi_qutebrowser_session.sh
     ~/scripts/rofi_spellcheck.sh:
-        path: desktop/scripts/rofi_spellcheck.sh
+      path: desktop/scripts/rofi_spellcheck.sh
     ~/scripts/rofi_gmusic.sh:
-        path: desktop/scripts/rofi_gmusic/rofi_select_song.sh
+      path: desktop/scripts/rofi_gmusic/rofi_select_song.sh
     ~/scripts/pass-rofi.sh:
-        path: desktop/gpg/scripts/pass-rofi.sh
+      path: desktop/gpg/scripts/pass-rofi.sh
     ~/scripts/rofi_todoist_quick.sh:
-        path: desktop/scripts/rofi_todoist_quick.sh
+      path: desktop/scripts/rofi_todoist_quick.sh
     ~/scripts/rofi_todoist_close.sh:
-        path: desktop/scripts/rofi_todoist_close.sh
+      path: desktop/scripts/rofi_todoist_close.sh
     ~/scripts/rofi_audio_set_default_sink.py:
-        path: desktop/scripts/rofi_audio_set_default_sink.py
+      path: desktop/scripts/rofi_audio_set_default_sink.py
     ~/scripts/rofi_audio_move_sink_input.py:
-        path: desktop/scripts/rofi_audio_move_sink_input.py
+      path: desktop/scripts/rofi_audio_move_sink_input.py
     ~/scripts/rofi_audio_create_loopback.py:
-        path: desktop/scripts/rofi_audio_create_loopback.py
+      path: desktop/scripts/rofi_audio_create_loopback.py
     ~/scripts/rofi_audio_create_virtual_sink.py:
-        path: desktop/scripts/rofi_audio_create_virtual_sink.py
+      path: desktop/scripts/rofi_audio_create_virtual_sink.py
 
 # Mpd
 - link:
     ~/.config/mpd:
-        path: desktop/mpd
+      path: desktop/mpd
 
 # Dunst
 - link:
     ~/.config/dunst:
-        path: desktop/dunst
+      path: desktop/dunst
 
 # Fonts
 - shell:
-    - 
-        command: ./desktop/fonts/powerline/install.sh
-        stdout: true
+    - command: ./desktop/fonts/powerline/install.sh
+      stdout: true
 
 # GPG
 - shell:
@@ -59,47 +57,53 @@
     - sed -i "s~\$HOME~$HOME~" "$HOME/.gnupg/gpg-agent.conf"
 - link:
     ~/scripts/pinentry-rofi.sh:
-        path: desktop/gpg/scripts/pinentry-rofi.sh
+      path: desktop/gpg/scripts/pinentry-rofi.sh
 
 # Qutebrowser
 - link:
     ~/.config/qutebrowser/config.py:
-        path: desktop/qutebrowser/config.py
+      path: desktop/qutebrowser/config.py
     ~/.config/qutebrowser/keys.yaml:
-        path: desktop/qutebrowser/keys.yaml
+      path: desktop/qutebrowser/keys.yaml
 
 # VSCode
 - link:
     ~/.config/Code/User/settings.json:
-        path: desktop/vscode/settings.json
+      path: desktop/vscode/settings.json
     ~/.config/VSCodium/User/settings.json:
-        path: desktop/vscode/settings.json
+      path: desktop/vscode/settings.json
 - shell:
-    - ["which code && cat desktop/vscode/extensions | DISPLAY=:-1 xargs -L 1 code --install-extension",
-    "Installing VSCode Extensions"]
+    - [
+        "which code && cat desktop/vscode/extensions | DISPLAY=:-1 xargs -L 1 code --install-extension",
+        "Installing VSCode Extensions",
+      ]
 
 # Zsh
-- link: 
+- link:
     ~/.zprofile:
-        path: desktop/zsh/.zprofile
+      path: desktop/zsh/.zprofile
 
 # Xresources. NOTE: This must come before anything that adds to Xresources
 - shell:
     - mkdir -p $HOME/.config/X
     - cp desktop/X/.Xresources $HOME/.config/X/.Xresources
 - link:
-    ~/.Xresources: 
-        path: $HOME/.config/X/.Xresources
+    ~/.Xresources:
+      path: $HOME/.config/X/.Xresources
 
 # URxvt
 - shell:
-    - [cat desktop/urxvt/.Xresources >> $HOME/.config/X/.Xresources, 
-        Adding URxvt to .Xresources]
+    - [
+        cat desktop/urxvt/.Xresources >> $HOME/.config/X/.Xresources,
+        Adding URxvt to .Xresources,
+      ]
 
 # Rofi
 - shell:
-    - [cat desktop/rofi/.Xresources >> $HOME/.config/X/.Xresources,
-        Adding rofi to .Xresources]
+    - [
+        cat desktop/rofi/.Xresources >> $HOME/.config/X/.Xresources,
+        Adding rofi to .Xresources,
+      ]
 
 # Compositor
 - link:

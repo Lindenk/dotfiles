@@ -2,13 +2,12 @@
 
 - defaults:
     link:
-        create: true
-        relink: true
+      create: true
+      relink: true
 
-- clean: ['~', '~/.config', '~/bin']
+- clean: ["~", "~/.config", "~/bin"]
 
 # Bin
-
 
 # Scripts
 - link:
@@ -17,7 +16,7 @@
 # Git
 - link:
     ~/.gitconfig:
-        path: common/git/.gitconfig
+      path: common/git/.gitconfig
 
 # Gnupg
 - shell:
@@ -25,70 +24,71 @@
     - cp "common/gpg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
 - link:
     ~/.gnupg/sshcontrol:
-        path: common/gpg/sshcontrol
+      path: common/gpg/sshcontrol
+      ignore-missing: true # encrypted
 
 # Less
 - link:
     ~/.lesskey:
-        path: common/less/.lesskey
+      path: common/less/.lesskey
 - shell:
     - "lesskey"
-    
+
 # Nano
 - link:
     ~/.nanorc:
-        path: common/nano/.nanorc
+      path: common/nano/.nanorc
     ~/.config/nano/syntax_highlighting:
-        path: common/nano/.config/nano/syntax_highlighting
+      path: common/nano/.config/nano/syntax_highlighting
 
 # Ranger
 - link:
     ~/.config/ranger/commands.py:
-        path: common/ranger/commands.py
+      path: common/ranger/commands.py
     ~/.config/ranger/scope.sh:
-        path: common/ranger/scope.sh
+      path: common/ranger/scope.sh
     ~/.config/ranger/rifle.conf:
-        path: common/ranger/rifle.conf
+      path: common/ranger/rifle.conf
     ~/.config/ranger/rc.conf:
-        path: common/ranger/rc.conf
+      path: common/ranger/rc.conf
 
 # Helix
 - link:
     ~/.config/helix/config.toml:
-        path: common/helix/config.toml
+      path: common/helix/config.toml
 
 - link:
     ~/.config/zellij:
-        path: common/zellij
-        
+      path: common/zellij
+
 # Taskwarrior
 - link:
     ~/.config/taskwarrior/taskrc:
-        path: common/taskwarrior/taskrc
+      path: common/taskwarrior/taskrc
+      ignore-missing: true # encrypted
 
 # Todoist
 - link:
     ~/.todoist.config.json:
-        path: common/todoist/todoist.config.json
+      path: common/todoist/todoist.config.json
 
 # Starship
 - link:
     ~/.config/starship.toml:
-       path: common/starship/starship.toml
+      path: common/starship/starship.toml
 
 # Wal
 - link:
     ~/.config/wal:
-        path: common/wal
+      path: common/wal
 
 # Zsh
-- link: 
+- link:
     ~/.config/zsh:
-        path: common/zsh/.config/zsh
+      path: common/zsh/.config/zsh
     ~/.zshenv:
-        path: common/zsh/.zshenv
+      path: common/zsh/.zshenv
     ~/.zshrc:
-        path: common/zsh/.zshrc
+      path: common/zsh/.zshrc
     ~/scripts/zsh-syntax-highlighting.zsh:
-        path: common/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+      path: common/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
