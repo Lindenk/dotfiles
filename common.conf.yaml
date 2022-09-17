@@ -22,10 +22,9 @@
 - shell:
     - mkdir -p "$HOME/.gnupg"
     - cp "common/gpg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
-- link:
-    ~/.gnupg/sshcontrol:
-      path: common/gpg/sshcontrol
-      ignore-missing: true # encrypted
+- shell:
+    - mkdir -p "$HOME/.gnupg/sshcontrol"
+    - cp common/gpg/sshcontrol "$HOME/.gnupg/sshcontrol"
 
 # Less
 - link:
@@ -71,6 +70,7 @@
 - link:
     ~/.todoist.config.json:
       path: common/todoist/todoist.config.json
+      ignore-missing: true # encrypted
 
 # Starship
 - link:
