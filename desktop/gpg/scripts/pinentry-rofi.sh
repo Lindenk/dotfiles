@@ -11,7 +11,7 @@ while read cmd rest; do
         \#*)
         ;;
         getpin)
-            _PP=$(echo "" | DISPLAY=:0 rofi -dmenu -password -p "Passphrase: " -theme purple -lines 0)
+            _PP=$(echo "" | DISPLAY=:0 rofi -dmenu -password -p "Passphrase" -no-fixed-num-lines -lines 0)
             echo "D $_PP"
             echo "OK"
             ;;

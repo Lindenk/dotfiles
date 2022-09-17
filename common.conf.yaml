@@ -12,7 +12,7 @@
 
 # Scripts
 - link:
-    ~/scripts/vim_config.py: common/scripts/vim_config.py
+    ~/scripts/vim-config.py: common/scripts/vim-config.py
 
 # Git
 - link:
@@ -75,6 +75,11 @@
 - link:
     ~/.config/starship.toml:
        path: common/starship/starship.toml
+
+# Wal
+- link:
+    ~/.config/wal:
+        path: common/wal
 
 # Zsh
 - link: 

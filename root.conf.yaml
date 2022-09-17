@@ -1,0 +1,12 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
+# Link to system configs
+
+
+# Xsession to run startx from lightdm
+- link:
+    /usr/share/xsessions/startx.desktop:
+      path: root/xsessions/startx.desktop

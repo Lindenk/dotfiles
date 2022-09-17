@@ -1,7 +1,5 @@
 theme = "dark_plus"
-unbind_defaults = true
-
-[editor]
+#unbind_defaults = true
 
 [keys.normal]
 
@@ -60,8 +58,8 @@ C-F = "till_prev_char"
 "A-." = "repeat_last_motion"
 
 # Move to next arg
-#"lt" = "select_prev_sibling"
-#"gt" = "select_next_sibling"
+'<' = "select_prev_sibling"
+'>' = "select_next_sibling"
 
 # Buffer switching
 o = "rotate_view"
@@ -83,9 +81,9 @@ C-t = ":bco"
 C-T = "wonly"
 
 # Search
-#semicolon = "search"
-#C-semicolon = "search_selection"
-#A-semicolon = "rsearch"
+';' = "search"
+'C-;' = "search_selection"
+'A-;' = "rsearch"
 '.' = "search_next"
 ',' = "search_prev"
 "/" = "global_search"
@@ -107,7 +105,8 @@ q = "open_below"
 Q = "open_above"
 
 # Selection
-s = "extend_line"
+s = ["move_prev_word_start", "keep_primary_selection", "move_next_word_end"]
+S = "extend_line"
 C-S = "select_all"
 
 esc = ["collapse_selection", "keep_primary_selection"]
@@ -149,7 +148,6 @@ space = "hover"
 
 ## Misc ##
 ":" = "command_mode"
-C-s = ":w" # Save
 
 g = "symbol_picker"
 G = "workspace_symbol_picker"
@@ -204,3 +202,29 @@ C-F = "till_prev_char"
 # Cursors
 L = "copy_selection_on_next_line"
 I = "copy_selection_on_prev_line"
+
+#[keys.insert]
+#C-k = "insert_digraphs"
+
+
+#[editor.digraphs]
+#ab = "≠"
+#abd = "⌈⌊"
+#xyz = { symbols = "≥⍵≤", description = "A face"}
+#
+#ax = "∩"
+#ay = "∪"
+#az = "⊂"
+#aw = "⊃"
+#
+#aa = "あ"
+#ii = "い"
+#uu = "う"
+#ee = "え"
+#oo = "お"
+#
+#ka = "か"
+#ki = "き"
+#ku = "く"
+#ke = "け"
+#ko = "こ"

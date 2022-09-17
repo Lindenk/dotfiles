@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=startx
+Comment=Run startx as the user, in turn calling .xinitrc
+Exec=startx
+TryExec=i3
+Type=Application
+X-LightDM-DesktopName=startx
+DesktopNames=startx
+Keywords=wm;windowmanager;window;manager;

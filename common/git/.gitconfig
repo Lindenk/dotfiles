@@ -4,7 +4,7 @@
 	signingkey = 9D435BF127293F4A
 
 [merge]
-	tool = vscode
+	tool = code
 
 [mergetool "vscode"]
 cmd = code -n --wait --diff "$REMOTE" "$BASE" "$LOCAL" "$MERGED"

@@ -1,17 +1,17 @@
 #!/bin/bash
 
-INPUT=`echo "" | rofi -dmenu -p "Spell Check: "`
+INPUT=`echo "" | rofi -dmenu -p "Spell Check" -no-fixed-num-lines -lines 0`
 SPCHECK=`echo "$INPUT" | aspell -a`
           
 SUGGESTIONS=`echo "$SPCHECK" | grep '^\*'`
 if [ -n "$SUGGESTIONS" ]; then
-    CHOICE=`echo "Spelling is correct" | rofi -dmenu`
+    CHOICE=`echo "Spelling is correct" | rofi -dmenu -p "" -no-fixed-num-lines -lines 0`
     test -n "$CHOICE" && echo -n "$INPUT" | xclip -selection clipboard
     exit 0
 fi
 SUGGESTIONS=`echo "$SPCHECK" | grep '^#'`
 if [ -n "$SUGGESTIONS" ]; then
-    echo "No Matches" | rofi -dmenu
+    echo "No Matches" | rofi -dmenu -p "" -no-fixed-num-lines -lines 0
     exit 1
 fi
 SUGGESTIONS=`echo "$SPCHECK" | grep '^&'`

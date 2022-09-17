@@ -17,7 +17,7 @@ monitor = DisplayPort-2
 
 [bar/left]
 inherit = section/main
-monitor = DisplayPort-1
+monitor = DisplayPort-0
 
 [bar/right]
 inherit = section/main

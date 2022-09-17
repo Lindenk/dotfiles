@@ -13,7 +13,7 @@
   "python.linting.enabled": false,
   "rust.rustLangSrcPath": "/usr/src/rust/src",
   "material-icon-theme.showUpdateMessage": false,
-  "extensions.ignoreRecommendations": false,
+  "extensions.ignoreRecommendations": true,
   "explorer.confirmDragAndDrop": false,
   "terminal.integrated.rendererType": "dom",
   "window.restoreWindows": "none",
@@ -28,6 +28,11 @@
     "**/.factorypath": true
   },
   "workbench.colorTheme": "Complete Dark",
+  "workbench.colorCustomizations": {
+    "editorInlayHint.background": "#00000000",
+    "editorInlayHint.foreground": "#a6a6a6f0",
+  },
+  "editor.inlayHints.fontSize": 12,
   "julia.enableTelemetry": true,
   "julia.enableCrashReporter": true,
   "rust.rustup": {
@@ -39,23 +44,25 @@
   "rust-analyzer.cargo.allFeatures": true,
   "rust-analyzer.lens.methodReferences": true,
   "rust-analyzer.lens.references": true,
-  "rust-analyzer.procMacro.enable": true,
+  //"rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.server.path": "/usr/bin/rust-analyzer",
   "keyboard.dispatch": "keyCode",
   "redhat.telemetry.enabled": true,
-  "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
+  "terminal.integrated.commandsToSkipShell": [
+    "language-julia.interrupt"
+  ],
   "julia.symbolCacheDownload": true,
   "workbench.editor.untitled.hint": "hidden",
   "security.workspace.trust.enabled": false,
   "godot_tools.editor_path": "/usr/bin/godot-mono",
   "godot.csharp.executablePath": "/usr/bin/godot-mono",
   "liveshare.accessibility.voiceEnabled": false,
-
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  //"editor.defaultFormatter": "esbenp.prettier-vscode",
   "vetur.format.defaultFormatter.html": "prettyhtml",
   "vetur.format.defaultFormatter.js": "prettier-eslint",
   "attrsSorter.order": [
@@ -116,5 +123,18 @@
   ],
   "[rust]": {
     "editor.defaultFormatter": "matklad.rust-analyzer"
-  }
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
+  },
+  "rust.mode": "rls",
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.inlineSuggest.enabled": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "svelte.enable-ts-plugin": true
 }

@@ -194,8 +194,8 @@ bindsym XF86AudioLowerVolume exec ponymix decrease 4
 bindsym $mod+Escape exec dunstctl close
 bindsym $mod+Shift+Escape exec dunstctl close-all
 bindsym $mod+Control+Shift+Escape exec dunstctl set-paused toggle
-bindsym $mod+Up exec dunstctl history-pop
-bindsym $mod+Menu exec dunstctl context
+#bindsym $mod+Up exec dunstctl history-pop
+#bindsym $mod+Menu exec dunstctl context
 
 # Other commands
 bindsym $mod+Shift+s exec ~/scripts/rofi_spellcheck.sh
@@ -213,13 +213,18 @@ bindsym --release $mod+Control+c exec ~/scripts/screenshot_to_clipboard.sh
 bindsym $mod+Control+m xdotool click --delay .05 --repeat 1000 1
 bindsym $mod+e exec xdotool click --delay 50 --repeat 30 1
 
+# Home Automation
+bindsym $mod+Up     exec  ~/scripts/home_assistant/office_lights.py on
+bindsym $mod+Down   exec  ~/scripts/home_assistant/office_lights.py off
+
 # alt binds
 bindcode 105 exec xdotool click 1
 
 # Start stuff
-exec --no-startup-id picom -b
+exec --no-startup-id picom -b --experimental-backends
+exec --no-startup-id flashfocus &
 exec --no-startup-id dunst &
-exec --no-startup-id code -n uishagoob1re3maph3maeshiVohl7Ahf
+#exec --no-startup-id code -n uishagoob1re3maph3maeshiVohl7Ahf
 exec --no-startup-id steam -silent
 exec_always --no-startup-id $HOME/scripts/polybar_launch.sh
 exec --no-startup-id fcitx -d
