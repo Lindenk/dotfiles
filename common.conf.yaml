@@ -61,16 +61,16 @@
       path: common/zellij
 
 # Taskwarrior
-- link:
-    ~/.config/taskwarrior/taskrc:
-      path: common/taskwarrior/taskrc
-      ignore-missing: true # encrypted
+#- link:
+#    ~/.config/taskwarrior/taskrc:
+#      path: common/taskwarrior/taskrc
+#      ignore-missing: true # encrypted
 
 # Todoist
-- link:
-    ~/.todoist.config.json:
-      path: common/todoist/todoist.config.json
-      ignore-missing: true # encrypted
+#- link:
+#    ~/.todoist.config.json:
+#      path: common/todoist/todoist.config.json
+#      ignore-missing: true # encrypted
 
 # Starship
 - link:
