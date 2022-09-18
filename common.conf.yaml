@@ -23,8 +23,8 @@
     - mkdir -p "$HOME/.gnupg"
     - cp "common/gpg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
 - shell:
-    - mkdir -p "$HOME/.gnupg/sshcontrol"
-    - cp common/gpg/sshcontrol "$HOME/.gnupg/sshcontrol"
+    - mkdir -p "$HOME/.gnupg"
+    - cp common/gpg/sshcontrol "$HOME/.gnupg/sshcontrol" || true
 
 # Less
 - link:
