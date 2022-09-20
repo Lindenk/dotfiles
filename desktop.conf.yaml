@@ -65,6 +65,8 @@
       path: desktop/qutebrowser/config.py
     ~/.config/qutebrowser/keys.yaml:
       path: desktop/qutebrowser/keys.yaml
+    ~/.config/qutebrowser/theme.py:
+      path: desktop/qutebrowser/theme.py
 
 # VSCode
 - link:
